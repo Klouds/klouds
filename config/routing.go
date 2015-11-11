@@ -1,4 +1,4 @@
-package routers
+package configuration
 
 import (
 	"net/http"
