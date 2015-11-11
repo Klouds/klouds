@@ -12,7 +12,7 @@
 		 	<col width="40%">
   			<col width="20%">
 			<tr>
-				<form method="POST" action="/apps/admin/newapp">
+				<form method="POST" action="/admin/newapp">
 				<td>
 			     	<label for="appname">Applicaton Name</label>
 			     </td><td>&nbsp;</td><td>
@@ -53,7 +53,7 @@
 		    		&nbsp;
 		    	</td>
 		    	<td>
-		    		<input type="text" size="47" id="dependencies" name="dependencies" value="{{.Dependencies}}"><br>
+		    		<input type="text" size="47" id="dependencies" name="dependencies" value="{{range .Dependencies}}{{.Dependency}},{{end}}"><br>
 		    	</td>
 
 		    </tr><tr>
@@ -64,7 +64,7 @@
 		    		&nbsp;
 		    	</td>
 		    	<td>
-		    		<input type="text" size="47" id="environmentvariables" name="environmentvariables" value="{{.EnvironmentVariables}}"><br>
+		    		<input type="text" size="47" id="environmentvariables" name="environmentvariables" value="{{range .EnvironmentVariables}}{{.Key}}:{{.Value}},{{end}}"><br>
 		    	</td>
 
 		    </tr>

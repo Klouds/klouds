@@ -198,6 +198,35 @@ func (c *UserController) Logout(rw http.ResponseWriter, r *http.Request, p httpr
 	}
 }
 
+func (c *UserController) ApplicationList(rw http.ResponseWriter, r *http.Request, p httprouter.Params) {
+		
+	if r.Method == "GET"{
+		var user *models.User
+
+		if getUserName(r) == "" {
+			c.HTML(rw, http.StatusOK, "user/login", nil)
+			return
+		} 
+		
+		user = GetUserByUsername(getUserName(r))
+
+		//Get application list for user
+		runningapps := []models.RunningApplication{}
+
+		GetRunningApplicationsForUser(&runningapps, user)
+
+		for i:=0; i<len(runningapps);i++ {
+			runningapps[i].Username = user.Username
+		}
+
+		if len(runningapps) == 0 {
+			runningapps = []models.RunningApplication{models.RunningApplication{Username: user.Username}}	
+		}
+		//pass the application list to the page
+		c.HTML(rw, http.StatusOK, "user/apps", runningapps)
+	}
+}
+
 // if logged in, go to profile / else login page
 func RedirectToLogin(c *UserController, rw http.ResponseWriter, r *http.Request, p httprouter.Params) {
 

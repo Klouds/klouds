@@ -1,11 +1,19 @@
 {{template "header" .}}
 <div class="container">
-
-    <hr class="featurette-divider">
+	<hr class="featurette-divider">
 
     <!-- First Featurette -->
     <div class="featurette">
-	    <h2> Profile </h2>
+
+    	<a href="/user/apps"> My Applications </a>
+
+    </div>
+    
+    <hr class="featurette-divider">
+
+
+    <div class="featurette">
+	    <h2 class="featurette-heading"> Profile </h2>
 		<b><i><font color="red">{{.Message}}</font></i></b>
 		<form method="POST" action="/user/profile">
 		<table>

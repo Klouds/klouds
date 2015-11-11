@@ -1,0 +1,37 @@
+    {{template "header" .}}
+
+    <div class="container">
+
+        <hr class="featurette-divider">
+
+        <!-- First Featurette -->
+        <div class="featurette">
+            <img class="featurette-image img-circle img-responsive pull-right" src="{{.Logo}}">
+            <h2 class="featurette-heading">
+            {{if .Name}}
+                {{.Name}}
+                <span class="text-muted"></span>
+      
+                </h2>
+                <p class="lead">{{.Description}}</p>
+                <p class="lead">Docker Image: {{.DockerImage}}<br>
+                    Dependencies:  {{range .Dependencies}}
+                        {{.Dependency}} <br>
+                    {{end}}
+                    Environment Variables: {{range .EnvironmentVariables}}
+                        {{.Key}}:{{.Value}} <br>
+                    {{end}}<br>
+                    Internal Port :  {{.InternalPort}} <br>
+                    Protocol: {{.Protocol}}
+                    </p>
+            {{else}}
+                Application Not Found!
+                </h2>
+            {{end}}
+
+        </div>
+
+        <!-- Footer -->
+        {{template "footer"}}
+
+    </div>

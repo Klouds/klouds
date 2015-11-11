@@ -1,0 +1,30 @@
+{
+    "id":"#APPLICATIONNAME",
+    "cpus": 0.01,
+    "mem": 50.0,
+    "instances": 1,
+
+    "container": {
+      "type": "DOCKER",
+      "docker": {
+        "image": "#DOCKERIMAGE",
+        "network": "BRIDGE",
+        "portMappings": [
+          {
+            "containerPort": #INTERNALPORT,
+            "protocol": "#PROTOCOL"
+          }
+        ],
+        "privileged": true,
+        "forcePullImage": false
+      }
+    },
+    "env": {
+        #ENVIRONMENTVARIABLES
+    },
+    "ports":[10000],
+    "labels": {
+        "HAPROXY_HTTP": "#ISITHTTP",
+        "HTTP_PORT_IDX_0_NAME": "#ROUTING"
+    }
+}

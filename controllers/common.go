@@ -10,6 +10,8 @@ import (
     "strings"
     "unicode"
     "fmt"
+    "math/rand"
+    "os"
 )
 
 type ErrorMessage struct {
@@ -91,7 +93,12 @@ func InitDB() {
 
 	fmt.Println("Initializing Database connection.")
 
-    dbm, err := gorm.Open("mysql", "root:root@(127.0.0.1:3306)/klouds?charset=utf8&parseTime=True")
+	mysqlhost := os.Getenv("MYSQL_HOST")
+	mysqluser := os.Getenv("MYSQL_USER")
+	mysqlpass := os.Getenv("MYSQL_PASSWORD")
+
+    dbm, err := gorm.Open("mysql", mysqluser+ ":" + mysqlpass + 
+    		"@(" + mysqlhost + ")/klouds?charset=utf8&parseTime=True")
 
     if(err != nil){
         panic("Unable to connect to the database")
@@ -103,7 +110,7 @@ func InitDB() {
     dbm.DB().Ping()
     dbm.DB().SetMaxIdleConns(10)
     dbm.DB().SetMaxOpenConns(100)
-    db.LogMode(false)
+    db.LogMode(true)
  
     if !dbm.HasTable(&models.User{}){
         dbm.CreateTable(&models.User{})
@@ -117,6 +124,9 @@ func InitDB() {
     if !dbm.HasTable(&models.EnvironmentVariable{}){
         dbm.CreateTable(&models.EnvironmentVariable{})
     }
+    if !dbm.HasTable(&models.RunningApplication{}){
+        dbm.CreateTable(&models.RunningApplication{})
+    }   
 }
 
 
@@ -217,4 +227,100 @@ func CreateApplication(a *models.Application) {
 
 	db.Create(&a)
 
+}
+
+//Get Application List
+func GetApplications(a *[]models.Application) {
+	fmt.Println("Getting list of all applications")
+
+	//Returns a list of all applications 
+	applicationList := []models.Application{}
+
+	db.Find(&applicationList)
+	//makes the list externally available
+	*a = applicationList
+}
+
+//Get application by name
+func GetApplicationByName(appname string) *models.Application {
+
+	newapp := &models.Application{}
+	dependencies := []models.Dependency{}
+	envvariables := []models.EnvironmentVariable{}
+
+	//Get an application -- this doesnt grab associated dbs
+	db.Where(&models.Application{Name: appname}).First(&newapp)
+
+	db.Model(&newapp).Related(&dependencies)
+	db.Model(&newapp).Related(&envvariables)
+
+	fmt.Println(newapp)
+	fmt.Println(dependencies)
+	fmt.Println(envvariables)
+
+	newapp.Dependencies = dependencies
+	newapp.EnvironmentVariables = envvariables
+	//Get dependencies
+
+	return newapp
+}
+
+const letterBytes = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+const (
+    letterIdxBits = 6                    // 6 bits to represent a letter index
+    letterIdxMask = 1<<letterIdxBits - 1 // All 1-bits, as many as letterIdxBits
+    letterIdxMax  = 63 / letterIdxBits   // # of letter indices fitting in 63 bits
+)
+
+func RandString(strlen int) string {
+	rand.Seed(time.Now().UTC().UnixNano())
+	const chars = "abcdefghijklmnopqrstuvwxyz0123456789"
+	result := make([]byte, strlen)
+	for i := 0; i < strlen; i++ {
+		result[i] = chars[rand.Intn(len(chars))]
+	}
+	return string(result)
+}
+
+/* USER APPLICATION THINGS */
+
+func AddRunningApplication(a *models.RunningApplication) {
+	fmt.Println("Adding running Application: " + a.Name)
+
+	db.Create(&a)
+}
+
+
+func GetRunningApplications(a *[]models.RunningApplication) {
+
+	fmt.Println("Getting list of all running applications")
+
+	//Returns a list of all applications 
+	applicationList := []models.RunningApplication{}
+
+	db.Find(&applicationList)
+	//makes the list externally available
+	*a = applicationList
+
+}
+
+func GetRunningApplicationsForUser(a *[]models.RunningApplication, u *models.User) {
+
+	runningapps := []models.RunningApplication{}
+
+	db.Where("owner = ?", u.Id).Find(&runningapps)
+
+	LoadLogoForRunningApplications(&runningapps)
+	*a = runningapps
+}
+
+func LoadLogoForRunningApplications(a *[]models.RunningApplication) {
+
+	for index := range *a {
+		application := models.Application{}
+
+		db.Where("id = ?", (*a)[index].ApplicationID).First(&application)
+
+		(*a)[index].Logo = application.Logo
+	}
 }
