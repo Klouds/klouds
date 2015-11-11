@@ -2,7 +2,7 @@ package main
 
 import (
 	"net/http"
-	"github.com/superordinate/klouds2.0/configuration"
+	"github.com/superordinate/klouds2.0/config/routing"
 )
 
 type Book struct {
