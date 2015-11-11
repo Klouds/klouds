@@ -12,7 +12,7 @@ import (
 type Routing struct {
 
 	Render *render.Render
-	Mux *httprouter.Router
+	Mux    *httprouter.Router
 
 }
 
@@ -21,21 +21,21 @@ func (r *Routing) Init() {
 	controllers.Init()
 	r.Render = render.New(render.Options{Directory: "views",
 		Funcs: []template.FuncMap{
-        {
+			{
 
-            "str2html": func(raw string) template.HTML {
-            	fmt.Println(raw)
-                return template.HTML(raw)
-            },
-        },
-    },
-    })
+				"str2html": func(raw string) template.HTML {
+					fmt.Println(raw)
+					return template.HTML(raw)
+				},
+			},
+		},
+	})
 	r.Mux = httprouter.New()
 
 	c := &controllers.SiteNavController{Render: r.Render}
 	u := &controllers.UserController{Render: r.Render}
 	a := &controllers.ApplicationsController{Render: r.Render}
-	
+
 	r.Mux.GET("/", c.Index)
 
 	//User Pages
@@ -52,6 +52,6 @@ func (r *Routing) Init() {
 	r.Mux.GET("/apps/admin", a.AppAdmin)
 	r.Mux.GET("/apps/admin/newapp", a.CreateApplication)
 	r.Mux.POST("/apps/admin/newapp", a.CreateApplication)
-	
+
 	r.Mux.NotFound = http.FileServer(http.Dir("public"))
 }

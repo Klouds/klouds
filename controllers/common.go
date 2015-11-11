@@ -91,7 +91,7 @@ func InitDB() {
 
 	fmt.Println("Initializing Database connection.")
 
-    dbm, err := gorm.Open("mysql", "root:diamond11@(127.0.0.1:3306)/klouds?charset=utf8&parseTime=True")
+    dbm, err := gorm.Open("mysql", "root:root@(127.0.0.1:3306)/klouds?charset=utf8&parseTime=True")
 
     if(err != nil){
         panic("Unable to connect to the database")

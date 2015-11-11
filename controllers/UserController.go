@@ -6,7 +6,7 @@ import (
 	"gopkg.in/unrolled/render.v1"
 	"github.com/julienschmidt/httprouter"
 	"strings"
-	//"fmt"
+//"fmt"
 )
 
 type UserController struct {
@@ -17,17 +17,17 @@ type UserController struct {
 
 //Registration page
 func (c *UserController) Register(rw http.ResponseWriter, r *http.Request, p httprouter.Params) {
-	
+
 
 
 	if r.Method == "GET" {
-		
+
 		var user *models.User
 
 		if getUserName(r) != "" {
 			user = GetUserByUsername(getUserName(r))
 			c.HTML(rw, http.StatusOK, "user/profile", user)
-			
+
 		} else {
 			c.HTML(rw, http.StatusOK, "user/register", nil)
 		}
@@ -42,13 +42,13 @@ func (c *UserController) Register(rw http.ResponseWriter, r *http.Request, p htt
 		confirmpassword := r.FormValue("confirmpassword")
 
 		newUser := models.User{
-			Username: 			username,
-			Email:				email,
-			FirstName: 			firstname,
-			Surname:			surname,
-			Password: 			password,
-			ConfirmPassword: 	confirmpassword,
-			Role:				"user"}
+			Username:            username,
+			Email:                email,
+			FirstName:            firstname,
+			Surname:            surname,
+			Password:            password,
+			ConfirmPassword:    confirmpassword,
+			Role:                "user"}
 
 
 		newUser.ValidateRegister()
@@ -59,7 +59,7 @@ func (c *UserController) Register(rw http.ResponseWriter, r *http.Request, p htt
 			return;
 		}
 
-			
+
 		if CheckForExistingUsername(&newUser) {
 			if CheckForExistingEmail(&newUser) {
 				CreateUser(&newUser);
@@ -75,14 +75,14 @@ func (c *UserController) Register(rw http.ResponseWriter, r *http.Request, p htt
 
 	}
 
-	
+
 }
 
 //Login page
 func (c *UserController) Login(rw http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	if r.Method == "GET" {
 		// if logged in, go to profile / else login page
-		RedirectToLogin(c,rw,r,p)
+		RedirectToLogin(c, rw, r, p)
 
 	} else if r.Method == "POST" {
 		r.ParseForm();
@@ -90,9 +90,9 @@ func (c *UserController) Login(rw http.ResponseWriter, r *http.Request, p httpro
 		username := strings.ToLower(r.FormValue("username"))
 		password := r.FormValue("password")
 
-		newUser := models.User {
-			Username: 	username,
-			Password: 	password}
+		newUser := models.User{
+			Username:    username,
+			Password:    password}
 
 		newUser.ValidateLogin()
 
@@ -128,7 +128,7 @@ func (c *UserController) Login(rw http.ResponseWriter, r *http.Request, p httpro
 //profile page
 func (c *UserController) Profile(rw http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	if r.Method == "GET" {
-		RedirectToLogin(c,rw,r,p)
+		RedirectToLogin(c, rw, r, p)
 
 	} else if r.Method == "POST" {
 		// if logged in, go to profile / else login page
@@ -136,7 +136,7 @@ func (c *UserController) Profile(rw http.ResponseWriter, r *http.Request, p http
 
 		if getUserName(r) != "" {
 			user = GetUserByUsername(getUserName(r))
-			
+
 		} else {
 			c.HTML(rw, http.StatusOK, "user/login", nil)
 			return
@@ -154,7 +154,7 @@ func (c *UserController) Profile(rw http.ResponseWriter, r *http.Request, p http
 		if (CheckForMatchingPassword(user)) {
 			//Passwords Match
 			//Validate new password, make sure they match, update user,display success message
-			
+
 			user.Password = password
 			user.ConfirmPassword = confirmpassword
 
@@ -169,7 +169,7 @@ func (c *UserController) Profile(rw http.ResponseWriter, r *http.Request, p http
 				c.HTML(rw, http.StatusOK, "user/profile", user)
 				return
 			}
-			
+
 
 		} else {
 			user.Message = "Password doesn't match record for " + user.Username
@@ -182,18 +182,18 @@ func (c *UserController) Profile(rw http.ResponseWriter, r *http.Request, p http
 func (c *UserController) Logout(rw http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	if r.Method == "POST" {
 		clearSession(rw)
-		
+
 		var user *models.User
 
 		if getUserName(r) != "" {
 			user = GetUserByUsername(getUserName(r))
 			c.HTML(rw, http.StatusOK, "user/logout", user)
-			
+
 		} else {
 			c.HTML(rw, http.StatusOK, "user/logout", nil)
 		}
 
-		
+
 
 	}
 }
@@ -201,13 +201,13 @@ func (c *UserController) Logout(rw http.ResponseWriter, r *http.Request, p httpr
 // if logged in, go to profile / else login page
 func RedirectToLogin(c *UserController, rw http.ResponseWriter, r *http.Request, p httprouter.Params) {
 
-		var user *models.User
+	var user *models.User
 
-		if getUserName(r) != "" {
-			user = GetUserByUsername(getUserName(r))
-			c.HTML(rw, http.StatusOK, "user/profile", user)
-			
-		} else {
-			c.HTML(rw, http.StatusOK, "user/login", nil)
-		}
+	if getUserName(r) != "" {
+		user = GetUserByUsername(getUserName(r))
+		c.HTML(rw, http.StatusOK, "user/profile", user)
+
+	} else {
+		c.HTML(rw, http.StatusOK, "user/login", nil)
+	}
 }
