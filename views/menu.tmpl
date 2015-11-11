@@ -29,7 +29,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-
+                    {{if .Username }}
                     <a href="/user/profile">Profile</a>
                     {{else}}
                     <a data-toggle="modal" data-target="#loginForm" href="#loginForm">Login</a>
