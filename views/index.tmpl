@@ -703,5 +703,47 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="registerForm" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" style="display: none">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="ModalLabel"> Form Register</h4>
+            </div>
+            <form method="POST" action="/user/register">
+                <div class="modal-body">
+                    <ul class="list-inline">
+                        <li>Twitter</li>
+                        <li>Google</li>
+                        <li>Github</li>
+                        <li>Bitbuket</li>
+                    </ul>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-width" name="firstname"  id="firstname" value="{{.FirstName}}" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-width" name="lastname"  id="lastname" value="{{.Surname}}" placeholder="Surname">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-width" name="email"  id="email" value="{{.Email}}" placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" id="password"  class="form-control  input-width"  name="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirmpassword"  class="form-control  input-width"  name="confirmpassword" placeholder="Re password">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
 
 {{template "footer" }}

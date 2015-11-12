@@ -1,112 +1,132 @@
 {{template "header" .}}
-<div class="container">
-	<hr class="featurette-divider">
+<header class="user-main-header color-bg-light">
+    <a href="#" class="user-logo"> <img src="/images/logo.png" alt="logo" class="responsive-img"></a>
 
-    <!-- First Featurette -->
-    <div class="featurette">
+    <div class="user-search is-hidden">
+        <form action="#">
+            <input type="search" placeholder="Search...">
+        </form>
+    </div> <!-- user-search -->
 
-    	<a href="/user/apps"> My Applications </a>
+    <a href="#" class="user-nav-trigger"><i class="fa  fa-align-justify white-text"></i></a>
 
-    </div>
-    
-    <hr class="featurette-divider">
+    <nav class="user-nav">
+        <ul class="user-top-nav">
+            <li><a href="#">Tour</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </nav>
+</header> <!-- .user-main-header -->
+
+<main class="user-main-content">
+    {{template "user/usernav" .}}
+    <div class="content-wrapper">
+        <h1 class="main-color"> Profile </h1>
+        {{if .Message}}
+        <div class="alert alert-danger">
+            <strong>Messages: !</strong> {{.Message}}
+        </div>
+        {{end}}
+        <form method="POST" action="/user/profile">
+            <table>
+                <col width="40%">
+                <col width="20%">
+                <tr>
+                    <td>
+                        Username:
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        {{.Username}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        First Name:
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        {{.FirstName}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last Name:
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        {{.Surname}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        {{.Email}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="currentpassword">Current Password</label>
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        <input type="password" id="currentpassword" name="currentpassword"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password</label>
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        <input type="password" id="password" name="password"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="confirmpassword">Confirm Password</label>
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        <input type="password" id="confirmpassword" name="confirmpassword"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" value="Register">Update Password</button>
+        </form>
+        </td>
+        <td>
+            &nbsp;
+        </td>
+        <td>
+
+            <form method="POST" action="/user/logout">
+                <button type="submit" value="logout">Log Out</button>
+            </form>
+        </td>
+
+        </tr>
+        </table>
+    </div> <!-- .content-wrapper -->
+</main> <!-- .user-main-content -->
 
 
-    <div class="featurette">
-	    <h2 class="featurette-heading"> Profile </h2>
-		<b><i><font color="red">{{.Message}}</font></i></b>
-		<form method="POST" action="/user/profile">
-		<table>
-		 	<col width="40%">
-  			<col width="20%">
-			<tr>
-				<td>
-			    	Username:
-			    </td>
-			    <td>
-			    	&nbsp;
-			    </td>
-			    <td>
-			    	{{.Username}}
-		    	</td>
-			</tr>
-			<tr>
-		    	<td>
-		    		First Name:
-		    	</td>
-		    	<td>
-		    		&nbsp;
-		    	</td>
-		    	<td>
-		    		{{.FirstName}}
-		    	</td>
-		    </tr><tr>
-		    	<td>
-		    		Last Name:
-		    	</td>
-		    	<td>
-		    		&nbsp;
-		    	</td>
-		    	<td>
-		    		{{.Surname}}
-		    	</td>
-		    </tr><tr>
-		    	<td>
-		    		Email:
-		    	</td>
-		    	<td>
-		    		&nbsp;
-		    	</td>
-		    	<td>
-		    		{{.Email}}
-		    	</td>
-		    </tr><tr>
-		    	<td>
-		    		<label for="currentpassword">Current Password</label>
-		    	</td>
-		    	<td>
-		    		&nbsp;
-		    	</td>
-		    	<td>
-		    		<input type="password" id="currentpassword" name="currentpassword"><br>
-		    	</td>
-		    </tr><tr>
-		    	<td>
-		    		<label for="password">Password</label>
-		    	</td>
-		    	<td>
-		    		&nbsp;
-		    	</td>
-		    	<td>
-		    		<input type="password" id="password" name="password"><br>
-		    	</td>
-		    </tr><tr>
-			    <td>
-			     	<label for="confirmpassword">Confirm Password</label>
-			    </td>
-			    <td>
-			    	&nbsp;
-			    </td>
-			    <td>
-			    	<input type="password" id="confirmpassword" name="confirmpassword"><br>
-			    </td>
-			</tr><tr>
-				<td>
-					<button type="submit" value="Register">Update Password</button>
-					</form>
-				</td>
-				<td>
-					&nbsp;
-				</td>
-				<td>
-			    	
-			    	<form method="POST" action="/user/logout">
-						<button type="submit" value="logout">Log Out</button>
-					</form>
-			    </td>
-				
-			</tr>
-		</table>
-    </div>
-</div>
 {{template "footer"}}

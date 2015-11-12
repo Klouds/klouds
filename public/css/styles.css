@@ -1,5 +1,6 @@
 @import "bootstrap.min.css";
 @import "../fonts/elegant-icons/elegant-icons.css";
+@import "../fonts/font-awesome/css/font-awesome.min.css";
 
 @import "owl.carousel.css";
 @import "owl.theme.css";
@@ -736,6 +737,9 @@ COLOR
 
 .main-color {
     color: #1565c0;
+}
+.color-bg-light {
+    background: #1784c7;
 }
 
 .color-bg {

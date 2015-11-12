@@ -93,17 +93,10 @@ func InitDB() {
 
 	fmt.Println("Initializing Database connection.")
 
-	mysqlhost := os.Getenv("MYSQL_HOST")
 	mysqluser := os.Getenv("MYSQL_USER")
 	mysqlpass := os.Getenv("MYSQL_PASSWORD")
-	mysqlhost = "localhost"
-	mysqluser = "root"
-	mysqlpass = "root"
-    dbm2, err := gorm.Open("mysql", mysqluser+ ":" + mysqlpass +
-    		"@(" + mysqlhost + ")/klouds?charset=utf8&parseTime=True")
-	fmt.Println("Coonnect",dbm2)
-	dbm, err := gorm.Open("mysql", "root:root@/klouds?charset=utf8&parseTime=True&loc=Local")
-
+	mysqldb := os.Getenv("MYSQL_DB")
+	dbm, err := gorm.Open("mysql", mysqluser+ ":" + mysqlpass +"@/"+mysqldb+"?charset=utf8&parseTime=True")
     if(err != nil){
         panic("Unable to connect to the database")
     } else {

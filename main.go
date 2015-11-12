@@ -3,6 +3,8 @@ package main
 import (
 	"net/http"
 	"github.com/superordinate/klouds2.0/routers"
+	"github.com/joho/godotenv"
+	"log"
 )
 
 type Book struct {
@@ -18,6 +20,12 @@ type Book struct {
 
 
 func main() {
+
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
 
 	var newmux routers.Routing
 	newmux.Init()

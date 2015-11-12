@@ -28,14 +28,12 @@
                 <li><a href="#app2">Desicribe</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li>
-                    {{if .Username }}
-                    <a href="/user/profile">Profile</a>
-                    {{else}}
-                    <a data-toggle="modal" data-target="#loginForm" href="#loginForm">Login</a>
-                    {{end}}
-
-                </li>
+                {{if .Username }}
+                <li><a href="/user/profile">Profile</a></li>
+                {{else}}
+                <li><a data-toggle="modal" data-target="#loginForm" href="#loginForm">Login</a></li>
+                <li><a data-toggle="modal" data-target="#registerForm" href="#registerForm">Register</a></li>
+                {{end}}
                 {{if .Username }}
                 <li>
                     <a href="/admin">Admin</a>

@@ -114,7 +114,6 @@ jQuery(function(){
         horizontalScrolling: false
     });
 
-
 });
 
 $(window).scroll(function () {
