@@ -537,7 +537,7 @@ object {
     margin-top: 40px;
 }
 
-.video {
+.video-container .video {
     background: transparent !important;
     margin-top:20px;
 }

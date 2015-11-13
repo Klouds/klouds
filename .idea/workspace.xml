@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18077cd7-a8be-4547-be8b-0e78f6867263" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.env" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.menu-aim.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/style-user.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/user-app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/user/usernav.tmpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/common.go" afterPath="$PROJECT_DIR$/controllers/common.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/custom.js" afterPath="$PROJECT_DIR$/public/js/custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/footer.tmpl" afterPath="$PROJECT_DIR$/views/footer.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/modernizr.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/header.tmpl" afterPath="$PROJECT_DIR$/views/header.tmpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.tmpl" afterPath="$PROJECT_DIR$/views/index.tmpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/menu.tmpl" afterPath="$PROJECT_DIR$/views/menu.tmpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/profile.tmpl" afterPath="$PROJECT_DIR$/views/user/profile.tmpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style-user.css" afterPath="$PROJECT_DIR$/public/css/style-user.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/styles.css" afterPath="$PROJECT_DIR$/public/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/user-app.js" afterPath="$PROJECT_DIR$/public/js/user-app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user/usernav.tmpl" afterPath="$PROJECT_DIR$/views/user/usernav.tmpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="klouds.iws" />
@@ -89,8 +82,18 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.24138">
-              <caret line="746" column="19" selection-start-line="746" selection-start-column="19" selection-end-line="747" selection-end-column="1" />
+            <state vertical-scroll-proportion="-9.965517">
+              <caret line="458" column="13" selection-start-line="458" selection-start-column="4" selection-end-line="458" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/bootstrap.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="107.01786">
+              <caret line="6" column="71922" selection-start-line="6" selection-start-column="71887" selection-end-line="6" selection-end-column="71922" />
               <folding />
             </state>
           </provider>
@@ -106,22 +109,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style-user.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style-user.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/style-user.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.965517">
-              <caret line="47" column="18" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.9620536">
+              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user-app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user-app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/user-app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.764509">
-              <caret line="93" column="44" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="44" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="2" selection-end-line="11" selection-end-column="9" />
+              <folding>
+                <marker date="1447389755187" expanded="true" signature="18:380" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,8 +134,8 @@
       <file leaf-file-name="header.tmpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/header.tmpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.615385">
-              <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+            <state vertical-scroll-proportion="-5.230769">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -139,28 +144,8 @@
       <file leaf-file-name="profile.tmpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/user/profile.tmpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.153846">
-              <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/custom.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.tmpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/menu.tmpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.92727274">
+              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -169,8 +154,8 @@
       <file leaf-file-name="footer.tmpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/footer.tmpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.346153">
-              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+            <state vertical-scroll-proportion="-3.2692308">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -179,8 +164,8 @@
       <file leaf-file-name="usernav.tmpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/user/usernav.tmpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+            <state vertical-scroll-proportion="-15.038462">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -226,14 +211,14 @@
         <option value="$PROJECT_DIR$/views/menu.tmpl" />
         <option value="$PROJECT_DIR$/views/index.tmpl" />
         <option value="$PROJECT_DIR$/controllers/common.go" />
-        <option value="$PROJECT_DIR$/views/header.tmpl" />
-        <option value="$PROJECT_DIR$/public/js/user-app.js" />
         <option value="$PROJECT_DIR$/public/js/custom.js" />
         <option value="$PROJECT_DIR$/views/footer.tmpl" />
-        <option value="$PROJECT_DIR$/public/css/styles.css" />
+        <option value="$PROJECT_DIR$/views/header.tmpl" />
         <option value="$PROJECT_DIR$/views/user/profile.tmpl" />
-        <option value="$PROJECT_DIR$/public/css/style-user.css" />
+        <option value="$PROJECT_DIR$/public/css/styles.css" />
+        <option value="$PROJECT_DIR$/public/js/user-app.js" />
         <option value="$PROJECT_DIR$/views/user/usernav.tmpl" />
+        <option value="$PROJECT_DIR$/public/css/style-user.css" />
       </list>
     </option>
   </component>
@@ -845,12 +830,12 @@
       <workItem from="1447211883188" duration="4807000" />
       <workItem from="1447218474507" duration="7924000" />
       <workItem from="1447231206078" duration="5129000" />
-      <workItem from="1447311901323" duration="18181000" />
+      <workItem from="1447311901323" duration="29446000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36041000" />
+    <option name="totallyTimeSpent" value="47306000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -874,7 +859,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="1.0" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6699134" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15511727" sideWeight="0.495671" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -908,30 +893,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controllers/UserController.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/user/login.tmpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="77" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routers/routing.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/footer.tmpl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1164,7 +1125,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding>
-            <element signature="e#21#43#0" expanded="true" />
+            <element signature="e#21#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1174,7 +1135,7 @@
         <state vertical-scroll-proportion="-12.413794">
           <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
-            <element signature="e#14#117#0" expanded="true" />
+            <element signature="e#14#117#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1258,30 +1219,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.tmpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.576923">
-          <caret line="647" column="79" selection-start-line="647" selection-start-column="9" selection-end-line="647" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.24138">
-          <caret line="746" column="19" selection-start-line="746" selection-start-column="19" selection-end-line="747" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/header.tmpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.615385">
-          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1290,42 +1227,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style-user.css">
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.965517">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/user/profile.tmpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.153846">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/user/usernav.tmpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.3325893">
+          <caret line="5906" column="4" selection-start-line="5906" selection-start-column="4" selection-end-line="5906" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/footer.tmpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.tmpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.576923">
+          <caret line="647" column="79" selection-start-line="647" selection-start-column="9" selection-end-line="647" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user/profile.tmpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.92727274">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/revel/revel/skeleton/public/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.827586">
+          <caret line="1681" column="1" selection-start-line="1681" selection-start-column="1" selection-end-line="1681" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="107.01786">
+          <caret line="6" column="71922" selection-start-line="6" selection-start-column="71887" selection-end-line="6" selection-end-column="71922" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.965517">
+          <caret line="458" column="13" selection-start-line="458" selection-start-column="4" selection-end-line="458" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/header.tmpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/user-app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.764509">
-          <caret line="93" column="44" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="2" selection-end-line="11" selection-end-column="9" />
+          <folding>
+            <marker date="1447389755187" expanded="true" signature="18:380" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user/usernav.tmpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.038462">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style-user.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9620536">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding />
         </state>
       </provider>

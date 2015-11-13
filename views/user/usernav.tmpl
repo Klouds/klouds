@@ -1,18 +1,35 @@
-<nav class="user-site-nav color-bg">
-    <ul>
-        <li class="user-label">Welcome</li>
-        <li><a href="/"><i class="fa  fa-user "></i>Profile</a></li>
-        <li><a href="/user/apps"><i class=" fa fa-folder"></i>Apps</a></li>
-        <li><a href="/user/payments"><i class="fa fa-dollar"></i>Payment</a></li>
-        <li><a href="/user/billing"><i class="fa fa-cart-arrow-down"></i>Billing</a></li>
-        <li><a href="/user/history"><i class="fa fa-book"></i>History</a></li>
-        <li class="has-children comments">
-            <a href="#"><i class="fa  fa-wechat "></i>Comments</a>
-            <ul>
-                <li><a href="#">All Comments</a></li>
-                <li><a href="#">Edit Comment</a></li>
-                <li><a href="#">Delete Comment</a></li>
-            </ul>
-        </li>
-    </ul>
+<nav class="navbar navbar-inverse color-bg" role="navigation" id="user-nav">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+        <a href="/" class="user-logo"> <img src="/images/logo-color.png" alt="logo" class="responsive-img"></a>
+	</div>
+
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse navbar-ex1-collapse">
+
+		<ul class="nav navbar-nav navbar-right">
+
+            <li><a href="/user/apps"><i class=" fa fa-folder"></i>Apps</a></li>
+            <li><a href="/user/payments"><i class="fa fa-dollar"></i>Payment</a></li>
+            <li><a href="/user/billing"><i class="fa fa-cart-arrow-down"></i>Billing</a></li>
+            <li><a href="/user/history"><i class="fa fa-book"></i>History</a></li>
+            <li><a href="#"><i class="fa  fa-sign-out"></i>Logout</a></li>
+            <li><a href="#"><i class="fa  fa-user"></i>Profile</a></li>
+		</ul>
+
+        <form class="navbar-form navbar-right" id="search-form" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="form-control submit" placeholder="Search"> <i class="toggle-search fa fa-search-plus"></i></button>
+            </div>
+        </form>
+	</div><!-- /.navbar-collapse -->
 </nav>

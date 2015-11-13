@@ -1,25 +1,7 @@
 {{template "header" .}}
-<header class="user-main-header color-bg-light">
-    <a href="#" class="user-logo"> <img src="/images/logo.png" alt="logo" class="responsive-img"></a>
-
-    <div class="user-search is-hidden">
-        <form action="#">
-            <input type="search" placeholder="Search...">
-        </form>
-    </div> <!-- user-search -->
-
-    <a href="#" class="user-nav-trigger"><i class="fa  fa-align-justify white-text"></i></a>
-
-    <nav class="user-nav">
-        <ul class="user-top-nav">
-            <li><a href="#">Tour</a></li>
-            <li><a href="#">Support</a></li>
-        </ul>
-    </nav>
-</header> <!-- .user-main-header -->
+{{template "user/usernav" .}}
 
 <main class="user-main-content">
-    {{template "user/usernav" .}}
     <div class="content-wrapper">
         <h1 class="main-color"> Profile </h1>
         {{if .Message}}
