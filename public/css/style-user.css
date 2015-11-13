@@ -79,7 +79,14 @@
 .navbar-inverse, .navbar-collapse, .navbar-inverse .navbar-form{
     border:none !important;
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:1110px){
+    #user-nav form{
+        display:none;
+    }
+    #user-nav i {
+        padding-right:5px;
+        font-size:12px;
+    }
     #user-nav .nav li a{
         border-right:0px solid #E8E8E8;
     }
