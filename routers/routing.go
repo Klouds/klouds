@@ -50,6 +50,7 @@ func (r *Routing) Init() {
 	r.Mux.GET("/user/apps", u.ApplicationList)
 	r.Mux.POST("/user/register", u.Register)
 	r.Mux.GET("/user/register", u.Register)
+	r.Mux.GET("/user/logout", u.Logout)
 	r.Mux.POST("/user/logout", u.Logout)
 	r.Mux.POST("/user/login", u.Login)
 	r.Mux.GET("/user/login", u.Login)

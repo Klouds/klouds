@@ -180,22 +180,18 @@ func (c *UserController) Profile(rw http.ResponseWriter, r *http.Request, p http
 }
 
 func (c *UserController) Logout(rw http.ResponseWriter, r *http.Request, p httprouter.Params) {
-	if r.Method == "POST" {
 		clearSession(rw)
-
 		var user *models.User
-
 		if getUserName(r) != "" {
 			user = GetUserByUsername(getUserName(r))
 			c.HTML(rw, http.StatusOK, "user/logout", user)
-
+			return
 		} else {
-			c.HTML(rw, http.StatusOK, "user/logout", nil)
+			c.HTML(rw, http.StatusOK, "user/login", nil)
+			return
 		}
 
 
-
-	}
 }
 
 func (c *UserController) ApplicationList(rw http.ResponseWriter, r *http.Request, p httprouter.Params) {

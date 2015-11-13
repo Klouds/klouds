@@ -792,3 +792,12 @@ footer .contact-box .expanded-contact-form .textarea-box:focus {
 footer .social-icons li a:hover {
     color: #1565c0;
 }
+
+
+/*---------------------------------------
+   SECTION:   PAGE LOGIN
+-----------------------------------------*/
+.page-app .user-main-content,
+.page-login .user-main-content{
+    margin-top: 60px;
+}

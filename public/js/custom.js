@@ -1,21 +1,21 @@
 /***
- * 
+ *
  * KLOUD ORG
- * 
+ *
  */
 
-(function(module){
-    module.loader = function(){
+(function (module) {
+    module.loader = function () {
         jQuery(".status").fadeOut();
         // will fade out the whole DIV that covers the website.
         jQuery(".preloader").delay(1000).fadeOut("slow");
     };
-    module.initVideo = function(){
+    module.initVideo = function () {
         $(".video-container").fitVids();
     };
-    module.textEffect = function(){
+    module.textEffect = function () {
         $(".texts > li").hide();
-        setInterval(function() {
+        setInterval(function () {
             $('.texts > li:first')
                 .fadeOut(1000)
                 .next()
@@ -25,33 +25,37 @@
         }, 3000);
 
     };
-    module.navPage = function(){
+    module.navPage = function () {
         $('.main-navigation').onePageNav({
             scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
             filter: ':not(.external)',
             changeHash: true
         });
     };
-    module.mainMediumNav = function(){
+    module.mainMediumNav = function () {
+        if ($("#home").length > 0) {
+
             var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
             if (top > 40) $('.sticky-navigation').stop().animate({"top": '0'});
             else $('.sticky-navigation').stop().animate({"top": '-60'});
-    };
-    module.mainMinNav = function(){
-            var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-            if (top > 40) $('.sticky-navigation').stop().animate({"top": '0'});
+        }
 
-            else $('.sticky-navigation').stop().animate({"top": '-120'});
     };
-    module.mainSmallNav = function(){
+    module.mainMinNav = function () {
+        var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+        if (top > 40) $('.sticky-navigation').stop().animate({"top": '0'});
+
+        else $('.sticky-navigation').stop().animate({"top": '-120'});
+    };
+    module.mainSmallNav = function () {
         $('.main-navigation a').on('click', function () {
             $(".navbar-toggle").click();
         });
     };
-    module.fullScreen = function(){
-        $(".full-screen").css('min-height',$(window).height());
+    module.fullScreen = function () {
+        $(".full-screen").css('min-height', $(window).height());
     };
-    module.scrollTo = function(){
+    module.scrollTo = function () {
         var scrollAnimationTime = 1200,
             scrollAnimation = 'easeInOutExpo';
         $('a.scrollto').bind('click.smoothscroll', function (event) {
@@ -64,7 +68,7 @@
             });
         });
     }
-    module.init = function(){
+    module.init = function () {
         module.textEffect();
         module.navPage();
         module.initVideo();
@@ -75,14 +79,14 @@
 })(Klouds = {});
 
 /* =================================
-   LOAD JS
-=================================== */
+ LOAD JS
+ =================================== */
 
-jQuery(window).load(function() {
-        Klouds.loader();
+jQuery(window).load(function () {
+    Klouds.loader();
 })
 
-jQuery(function(){
+jQuery(function () {
     Klouds.mainMediumNav();
     Klouds.init();
     Klouds.fullScreen();
@@ -135,11 +139,11 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 /* COLLAPSE NAVIGATION ON MOBILE AFTER CLICKING ON LINK*/
 
 if (matchMedia('(max-width: 480px)').matches) {
-   Klouds.mainSmallNav();
+    Klouds.mainSmallNav();
 }
 
 if (matchMedia('(min-width: 992px), (max-width: 767px)').matches) {
- Klouds.mainMediumNav();
+    Klouds.mainMediumNav();
 }
 
 if (matchMedia('(min-width: 768px) and (max-width: 991px)').matches) {

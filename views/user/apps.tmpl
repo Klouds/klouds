@@ -1,45 +1,33 @@
-    {{template "apps/header" index . 0}}
+{{template "header" .}}
+{{template "user/usernav" .}}
+<div class="page-app">
+    <!-- COLOR OVER IMAGE -->
+    <!-- /END COLOR OVERLAY -->
+    <!-- /END HEADER -->
+    <main class="user-main-content">
+        <div class="container">
+            <div class="row">
+                <h1 class="page-header">Application List <small>Look at all the things!</small> </h1>
 
-    <!-- Page Content -->
-    <div class="container">
-
-        <!-- Page Heading -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Application List
-                    <small>Look at all the things!</small>
-                </h1>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-         
-        {{range $index, $element := .}}
-            {{if eq (mod $index 4) 0}}
-                <div class="row">
-            {{end}}
-                    <div class="col-md-3 portfolio-item">
-                    <table style="width:100%">
-	                    <tr>
-							<td>
-							{{.Name}}<br>
-	                        <a target="_blank" href="http://{{.AccessUrl}}">Access Here!</a><br>
-	                        </td>
-							<td style="text-align:right"><img style="width:100px; height:100px;" src="{{.Logo}}" alt="Logo not found"/></td>
-						</tr>
-					</table>
-
+                {{range $index, $element := .}}
+                {{if eq (mod $index 4) 0}}
+                    {{end}}
+                    <div class="col-md-4 portfolio-item">
+                        <a href="#">
+                            <img class="img-responsive"  src="{{.Logo}}" alt="{{.Name}}">
+                        </a>
+                        <h3>
+                            <a target="_blank" href="http://{{.AccessUrl}}">{{.Name}}</a>
+                        </h3>
                     </div>
-
-            {{if eq (mod $index 4) 3}}
-                </div>
-            {{end}}
+                    {{if eq (mod $index 4) 3}}
+                {{end}}
 
 
-        {{end}}
-        <!-- /.row -->
-
-  
-    </div>
-      {{template "footer"}}
+                {{end}}
+        </div>
+        <!-- .content-wrapper -->
+    </main>
+    <!-- .user-main-content -->
+</div>
+{{template "footer"}}
