@@ -10,7 +10,7 @@ type Application struct {
   Description 				string 					`sql:"size:255; not null;"`
   InternalPort 				string 					`sql:"size:30"` 
   Protocol					string 					`sql:"size:30"`
-  	Username				string					`sql:"-"`
+  	User					User					`sql:"-"`
   	Message					string 					`sql:"-"`	//These dont get put in the database
 }
 

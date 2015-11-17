@@ -1,0 +1,27 @@
+{
+    "id":"#USERNAME-minecraft",
+    "cpus": 1,
+    "mem": 1000.0,
+    "instances": 1,
+    "container": {
+      "type": "DOCKER",
+      "docker": {
+        "image": "kitematic/minecraft",
+        "network": "BRIDGE",
+        "portMappings": [
+          {
+            "containerPort": 25565
+            "protocol":"tcp"
+          }
+        ],
+        "privileged": true,
+        "parameters": [],
+        "forcePullImage": true
+      }
+    },
+    "ports":[10000],
+    "labels": {
+        "HAPROXY_HTTP": "false",
+        "HTTP_PORT_IDX_0_NAME": "#USERNAME-minecraft"
+    }
+}

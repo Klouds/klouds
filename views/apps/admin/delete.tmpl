@@ -1,0 +1,49 @@
+    {{template "header" .User}}
+
+    <div class="container">
+
+        <hr class="featurette-divider">
+
+        <!-- First Featurette -->
+        <div class="featurette">
+            <img class="featurette-image img-circle img-responsive pull-right" width="350px" src="{{.Logo}}">
+            <h2 class="featurette-heading">
+            {{if .Name}}
+                {{.Name}}
+                <span class="text-muted"></span>
+      
+                </h2>
+                <p class="lead">{{.Description}}</p>
+                <p class="lead">Docker Image: {{.DockerImage}}<br>
+                    Dependencies:  {{range .Dependencies}}
+                        {{.Dependency}} <br>
+                    {{end}}
+                    Environment Variables: {{range .EnvironmentVariables}}
+                        {{.Key}}:{{.Value}} <br>
+                    {{end}}<br>
+                    Internal Port :  {{.InternalPort}} <br>
+                    Protocol: {{.Protocol}}
+                    </p>
+                    
+                    
+                    <h2><font color="red"> Are you sure you want to delete the application? <br>
+                    <small> This will also remove all running instances of the application! <br>
+                    <small> this process is irreversible </small></font></h2>
+                    {{if eq .User.Role "admin"}}
+                        <p>
+                            <form action="/apps/app/{{.Name}}/delete" method="post" id="deletebutton">
+                                <button type="submit" class="btn btn-danger"form="deletebutton" value="Submit">Delete Application</button><br>
+                            </form>
+                        </p>
+                    {{end}}
+            {{else}}
+                Application Not Found!
+                </h2>
+            {{end}}
+
+        </div>
+
+        <!-- Footer -->
+        {{template "footer"}}
+
+    </div>

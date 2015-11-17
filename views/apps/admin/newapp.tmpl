@@ -1,4 +1,4 @@
-{{template "header" .}}
+{{template "header" .User}}
 
 <div class="container">
 
@@ -6,7 +6,7 @@
 
     <!-- First Featurette -->
     <div class="featurette">
-		<h1>New Application</h1>
+		<h1>Edit Application</h1>
 		<b><i><font color="red">{{.Message}}</font></i></b>
 		<table>
 		 	<col width="40%">
@@ -53,7 +53,7 @@
 		    		&nbsp;
 		    	</td>
 		    	<td>
-		    		<input type="text" size="47" id="dependencies" name="dependencies" value="{{range .Dependencies}}{{.Dependency}},{{end}}"><br>
+		    		<input type="text" size="47" id="dependencies" name="dependencies" value="{{range .Dependencies}}{{if ne .Dependency ""}}{{.Dependency}},{{end}}{{end}}"><br>
 		    	</td>
 
 		    </tr><tr>
@@ -64,7 +64,7 @@
 		    		&nbsp;
 		    	</td>
 		    	<td>
-		    		<input type="text" size="47" id="environmentvariables" name="environmentvariables" value="{{range .EnvironmentVariables}}{{.Key}}:{{.Value}},{{end}}"><br>
+		    		<input type="text" size="47" id="environmentvariables" name="environmentvariables" value="{{range .EnvironmentVariables}}{{if ne .Key ""}}.{{.Key}}:{{.Value}},{{end}}{{end}}"><br>
 		    	</td>
 
 		    </tr>
@@ -104,8 +104,7 @@
 		    		&nbsp;
 		    	</td>
 		    	<td>
-		    		<textarea rows="8" cols="50" id="description" name="description">
-					{{.Description}}
+		    		<textarea rows="8" cols="50" id="description" name="description">{{.Description}}
 					</textarea>
 		    	</td>
 		    </tr><tr>				
@@ -124,7 +123,7 @@
 			    	&nbsp;
 			    </td>
 			    <td>
-			    	<input type="text" size="47" id="internalport" name="internalport"><br>
+			    	<input type="text" size="47" id="internalport" name="internalport" value="{{.InternalPort}}"><br>
 			    </td>
 			</tr><tr>				
 		    	<td>
@@ -142,7 +141,7 @@
 			    	&nbsp;
 			    </td>
 			    <td>
-			    	<input type="text" size="47" id="protocol" name="protocol"><br>
+			    	<input type="text" size="47" id="protocol" name="protocol" value="{{.Protocol}}"><br>
 			    </td>
 			</tr><tr>
 				<td>

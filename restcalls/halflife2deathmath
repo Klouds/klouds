@@ -1,0 +1,26 @@
+{
+    "id":"#USERNAME-hl2dm",
+    "cpus": 1,
+    "mem": 1000.0,
+    "instances": 1,
+    "container": {
+      "type": "DOCKER",
+      "docker": {
+        "image": "superordinate/docker-steamcmd-play:hl2dm",
+        "network": "BRIDGE",
+        "portMappings": [
+          {
+            "containerPort": 27015
+          }
+        ],
+        "privileged": true,
+        "parameters": [],
+        "forcePullImage": true
+      }
+    },
+    "ports":[10000],
+    "labels": {
+        "HAPROXY_HTTP": "false",
+        "HTTP_PORT_IDX_0_NAME": "#USERNAME-hl2dm"
+    }
+}

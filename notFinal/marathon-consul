@@ -1,0 +1,26 @@
+{
+  "id": "#USERNAME-marathon-consul",
+  "args": ["--registry=http://104.199.133.238:8500"],
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "ciscocloud/marathon-consul",
+      "network": "BRIDGE",
+      "portMappings": [{"containerPort": 4000, "protocol": "tcp"}]
+    }
+  },
+  "constraints": [["hostname", "UNIQUE"]],
+  "ports": [4000],
+  "healthChecks": [{
+    "protocol": "HTTP",
+    "path": "/health",
+    "portIndex": 0
+  }],
+  "instances": 1,
+  "cpus": 0.01,
+  "mem": 128,
+  "labels": {
+        "HAPROXY_HTTP": "false",
+        "HTTP_PORT_IDX_0_NAME": "#USERNAME-marathon-consul"
+  }
+}

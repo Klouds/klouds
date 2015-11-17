@@ -1,0 +1,31 @@
+{
+    "id":"#USERNAME-wordpress",
+    "cpus": 1,
+    "mem": 1000.0,
+    "instances": 1,
+    "env": {
+        "WORDPRESS_DB_HOST": "104.155.207.250:31971",
+        "WORDPRESS_DB_PASSWORD": "thesecretsauce"
+    },
+    "container": {
+      "type": "DOCKER",
+      "docker": {
+        "image": "wordpress",
+        "network": "BRIDGE",
+        "portMappings": [
+          {
+            "containerPort": 80,
+            "protocol":"tcp"
+          }
+        ],
+        "privileged": true,
+        "parameters": [],
+        "forcePullImage": true
+      }
+    },
+    "ports":[10000],
+    "labels": {
+        "HAPROXY_HTTP": "true",
+        "HTTP_PORT_IDX_0_NAME": "#USERNAME-wordpress"
+    }
+}

@@ -13,12 +13,23 @@
                 {{if eq (mod $index 4) 0}}
                     {{end}}
                     <div class="col-md-4 portfolio-item">
-                        <a href="#">
-                            <img class="img-responsive"  src="{{.Logo}}" alt="{{.Name}}">
-                        </a>
-                        <h3>
-                            <a target="_blank" href="http://{{.AccessUrl}}">{{.Name}}</a>
-                        </h3>
+                    <table style="width:100%">
+	                    <tr>
+							<td>
+    							{{.Name}}<br>
+                                {{if eq .IsRunning true}}
+    	                        <a href="http://{{.AccessUrl}}">Access Here!</a><br>
+                                {{else}}
+                                <a href="#">Application Still Launching!</a><br>
+                                {{end}}
+                                <br>
+                                <a href="/user/apps/deleteapp/{{.Name}}"><img src="/images/trashicon.png" style="width:25px; height:25px;" alt="trash" /></a>
+	                        </td>
+							<td style="text-align:right">
+                                <img style="width:100px; height:100px;" src="{{.Logo}}" alt="Logo not found"/>
+                            </td>
+						</tr>
+					</table>
                     </div>
                     {{if eq (mod $index 4) 3}}
                 {{end}}

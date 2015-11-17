@@ -1,33 +1,29 @@
 package main
 
+//paul, what do the _'s before imports mean?  Thanks!
 import (
-	"net/http"
-	"github.com/superordinate/klouds2.0/routers"
-	"github.com/joho/godotenv"
-	"log"
+	"fmt"
+
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/orm"
+	_ "github.com/mattn/go-sqlite3"
+	_ "github.com/superordinate/klouds/models"
+	_ "github.com/superordinate/klouds/routers"
 )
 
-type Book struct {
-	Title string	`json:"title"`
-	Author string	`json:"author"`
+func init() {
+	orm.RegisterDriver("sqlite", orm.DR_Sqlite)
+	orm.RegisterDataBase("default", "sqlite3", "acme.db")
+	name := "default"
+	force := false
+	verbose := false
+	err := orm.RunSyncdb(name, force, verbose)
+	if err != nil {
+		fmt.Println(err)
+	}
 }
 
-//	Action defines a standard function signature for us to use when 
-// 	creating controller actions. A controller action is basically just a method attached
-//	to a controller.
-
-
-
-
 func main() {
-
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
-
-
-	var newmux routers.Routing
-	newmux.Init()
-	http.ListenAndServe("0.0.0.0:1337", newmux.Mux)
+	beego.SessionOn = true
+	beego.Run()
 }

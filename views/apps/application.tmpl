@@ -25,9 +25,25 @@
                     Protocol: {{.Protocol}}
                     </p>
 
-                    <p><form action="/apps/app/{{.Name}}/launch" method="post" id="form1">
-                        <button type="submit" class="btn btn-primary"form="form1" value="Submit">Launch Application</button>
-                        </form></p>
+                    <p>
+                        <form action="/apps/app/{{.Name}}/launch" method="post" id="form1">
+                            <button type="submit" class="btn btn-primary"form="form1" value="Submit">Launch Application</button>
+                        </form>
+                    </p>
+
+                    {{if eq .User.Role "admin"}}
+                        <p>
+                            <form action="/apps/app/{{.Name}}/edit" method="get" id="editbutton">
+                                <button type="submit" class="btn btn-primary"form="editbutton" value="Submit">Edit Application</button>
+                            </form>
+                        </p>
+                        <p>
+                            <form action="/apps/app/{{.Name}}/delete" method="get" id="deletebutton">
+                                <button type="submit" class="btn btn-danger"form="deletebutton" value="Submit">Delete Application</button><br>
+                                <small>This process is irreversible.</small>
+                            </form>
+                        </p>
+                    {{end}}
             {{else}}
                 Application Not Found!
                 </h2>

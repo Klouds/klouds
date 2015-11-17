@@ -1,0 +1,688 @@
+
+<!-- =========================
+     FEATURES
+============================== -->
+<section class="features" id="features">
+
+	<div class="container">
+
+		<!-- SECTION HEADER -->
+		<div class="section-header wow fadeIn animated" data-wow-offset="120" data-wow-duration="1.5s">
+
+			<!-- SECTION TITLE -->
+			<h2 class="white-text">Amazing Features</h2>
+			<div class="section-description white-text">
+				List your app features and all the details Lorem ipsum dolor kadr
+			</div>
+			<div class="line"></div>
+		</div>
+		<!-- /END SECTION HEADER -->
+
+
+		<div class="row">
+
+			<!-- FEATURES LEFT -->
+			<div class="col-md-4 col-sm-4 features-left wow fadeInLeft animated" data-wow-offset="10"
+				 data-wow-duration="1.5s">
+
+				<!-- FEATURE -->
+				<div class="feature">
+
+					<!-- ICON -->
+					<div class="icon-container">
+						<div class="icon">
+							<i class="icon_map_alt"></i>
+						</div>
+					</div>
+
+					<!-- FEATURE HEADING AND DESCRIPTION -->
+					<div class="fetaure-details">
+						<h4>Flexibility</h4>
+
+						<p>
+							Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.
+						</p>
+					</div>
+
+				</div>
+				<!-- /END SINGLE FEATURE -->
+
+				<!-- FEATURE -->
+				<div class="feature">
+
+					<!-- ICON -->
+					<div class="icon-container">
+						<div class="icon">
+							<i class="icon_tools"></i>
+						</div>
+					</div>
+
+					<!-- FEATURE HEADING AND DESCRIPTION -->
+					<div class="fetaure-details">
+						<h4>Solid infrastructure</h4>
+
+						<p>
+							Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.
+						</p>
+					</div>
+
+				</div>
+				<!-- /END SINGLE FEATURE -->
+
+				<!-- FEATURE -->
+				<div class="feature">
+
+					<!-- ICON -->
+					<div class="icon-container">
+						<div class="icon">
+							<i class="icon_chat_alt"></i>
+						</div>
+					</div>
+
+					<!-- FEATURE HEADING AND DESCRIPTION -->
+					<div class="fetaure-details">
+						<h4>Support Quality</h4>
+
+						<p>
+							Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magn.
+						</p>
+					</div>
+
+				</div>
+				<!-- /END SINGLE FEATURE -->
+
+			</div>
+			<!-- /END FEATURES LEFT -->
+
+			<!-- PHONE IMAGE -->
+			<div class="col-md-4 col-sm-4">
+				<div class="text-image wow bounceIn animated" data-wow-offset="120" data-wow-duration="1.5s">
+					<div class="tlt">
+						<ul class="texts font-alter">
+							<li><p class="big-text">INCLUDED</p></li>
+							<li><p class="big-text">SCALED</p></li>
+							<li><p class="big-text">UPDATED</p></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- FEATURES RIGHT -->
+			<div class="col-md-4 col-sm-4 features-right wow fadeInRight animated" data-wow-offset="10"
+				 data-wow-duration="1.5s">
+
+				<!-- FEATURE -->
+				<div class="feature">
+
+					<!-- ICON -->
+					<div class="icon-container">
+						<div class="icon">
+							<i class="icon_puzzle"></i>
+						</div>
+					</div>
+
+					<!-- FEATURE HEADING AND DESCRIPTION -->
+					<div class="fetaure-details">
+						<h4>Usability Score	</h4>
+
+						<p>
+							Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.
+						</p>
+					</div>
+
+				</div>
+				<!-- /END SINGLE FEATURE -->
+
+				<!-- FEATURE -->
+				<div class="feature">
+
+					<!-- ICON -->
+					<div class="icon-container">
+						<div class="icon">
+							<i class="icon_shield_alt"></i>
+						</div>
+					</div>
+
+					<!-- FEATURE HEADING AND DESCRIPTION -->
+					<div class="fetaure-details">
+						<h4>Security</h4>
+
+						<p>
+							Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.
+						</p>
+					</div>
+
+				</div>
+
+				<!-- /END SINGLE FEATURE -->
+
+				<!-- FEATURE -->
+				<div class="feature">
+
+					<!-- ICON -->
+					<div class="icon-container">
+						<div class="icon">
+							<i class="icon_map_alt"></i>
+						</div>
+					</div>
+
+					<!-- FEATURE HEADING AND DESCRIPTION -->
+					<div class="fetaure-details">
+						<h4>Multi Server Location</h4>
+
+						<p>
+							Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.
+						</p>
+					</div>
+
+				</div>
+				<!-- /END SINGLE FEATURE -->
+
+			</div>
+			<!-- /END FEATURES RIGHT -->
+
+		</div>
+		<!-- /END ROW -->
+
+	</div>
+	<!-- /END CONTAINER -->
+
+</section>
+<!-- /END FEATURES SECTION -->
+
+
+<!-- =========================
+     APP LEFT SECTION
+============================== -->
+<section class="app" id="app">
+
+	<div class="container">
+
+		<div class="row">
+
+			<!-- PHONES IMAGE -->
+			<div class="col-md-8 wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s">
+				<div class="app-image">
+					<img class="img-responsive" src="/static/images/overview_display_hero.png" alt="">
+				</div>
+			</div>
+
+			<!-- RIGHT SIDE WITH APP -->
+			<div class="col-md-4 left-align wow fadeInLeft animated dark-text" data-wow-offset="10" data-wow-duration="1.5s">
+
+				<!-- SECTION TITLE -->
+				<h2 class="main-color">It's best</h2>
+
+				<div class="line-left">
+				</div>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+					et dolore magna aliqua.
+				</p>
+
+				<!-- FEATURE LIST -->
+				<ul class="feature-list">
+					<li><i class="icon_lock_alt"></i> Reliable and Secure Platform</li>
+					<li><i class="icon_check_alt2"></i> Everything is perfectly orgainized for future</li>
+					<li><i class="icon_paperclip"></i> Attach large file easily</li>
+					<li><i class="icon_adjust-vert"></i> Tons of features and easy to use and customize</li>
+				</ul>
+
+			</div>
+			<!-- /END RIGHT APP -->
+
+		</div>
+		<!-- /END ROW -->
+
+	</div>
+	<!-- /END CONTAINER -->
+
+</section>
+<!-- /END SECTION -->
+
+
+<!-- =========================
+     APP RIGHT SECTION
+============================== -->
+<section class="app" id="app1">
+
+	<div class="container">
+
+		<div class="row">
+
+			<!-- APP -->
+			<div class="col-md-4 left-align wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">
+
+				<!-- SECTION TITLE -->
+				<h2 class="main-color">Great way to deploy your app</h2>
+
+				<div class="line-left">
+				</div>
+				<p class="dark-text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.<br/><br/>
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+					anim id est laborum.
+				</p>
+
+			</div>
+			<!-- /ENDAPP -->
+
+			<!-- PHONES IMAGE -->
+			<div class="col-md-8 wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s">
+				<div class="phone-image">
+					<img src="/static/images/code_macbook_right.png" alt="">
+				</div>
+			</div>
+			<!-- /END PHONES IMAGE -->
+
+		</div>
+		<!-- /END ROW -->
+
+	</div>
+	<!-- /END CONTAINER -->
+
+</section>
+<!-- /END SECTION -->
+
+
+<!-- =========================
+     APP LEFT SECTION WITH VIDEO
+============================== -->
+<section class="app" id="app2">
+
+	<div class="container">
+
+		<div class="row">
+
+			<!-- PHONES IMAGE -->
+			<div class="col-md-12 wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s">
+				<div class="video-container">
+					<h2 class="main-color">How to Use</h2>
+					<div class="line"></div>
+					<div class="video">
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="//www.youtube.com/embed/8hKDz3Va3HQ?rel=0"  frameborder="0"
+									allowfullscreen></iframe>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<!-- /END RIGHT APP -->
+
+		</div>
+		<!-- /END ROW -->
+
+	</div>
+	<!-- /END CONTAINER -->
+
+</section>
+<!-- /END SECTION -->
+
+
+<!-- =========================
+     TESTIMONIALS
+============================== -->
+<section class="testimonials">
+
+	<div class="color-overlay">
+
+		<div class="container wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+
+			<!-- FEEDBACKS -->
+			<div id="feedbacks" class="owl-carousel owl-theme">
+
+				<!-- SINGLE FEEDBACK -->
+				<div class="feedback">
+
+
+
+					<div class="message">
+						Dramatically redefine compelling niches before dynamic innovation. Objectively drive user-centric architectures for real-time bandwidth. Competently supply team driven core competencies vis-a-vis inexpensive functionalities
+					</div>
+
+					<div class="white-line">
+					</div>
+
+					<!-- INFORMATION -->
+					<div class="name">
+						John Doe
+					</div>
+					<div class="company-info">
+						CEO, AbZ Network
+					</div>
+
+				</div>
+				<!-- /END SINGLE FEEDBACK -->
+
+				<!-- SINGLE FEEDBACK -->
+				<div class="feedback">
+
+
+
+					<div class="message">
+						Dramatically redefine compelling niches before dynamic innovation. Objectively drive user-centric architectures for real-time bandwidth. Competently supply team driven core competencies vis-a-vis inexpensive functionalities
+					</div>
+
+					<div class="white-line">
+					</div>
+
+					<!-- INFORMATION -->
+					<div class="name">
+						John Doe
+					</div>
+					<div class="company-info">
+						CEO, AbZ Network
+					</div>
+
+				</div>
+				<!-- /END SINGLE FEEDBACK -->
+
+				<!-- SINGLE FEEDBACK -->
+				<div class="feedback">
+
+
+
+					<div class="message">
+						Dramatically redefine compelling niches before dynamic innovation. Objectively drive user-centric architectures for real-time bandwidth. Competently supply team driven core competencies vis-a-vis inexpensive functionalities
+					</div>
+
+					<div class="white-line">
+					</div>
+
+					<!-- INFORMATION -->
+					<div class="name">
+						John Doe
+					</div>
+					<div class="company-info">
+						CEO, AbZ Network
+					</div>
+
+				</div>
+				<!-- /END SINGLE FEEDBACK -->
+
+			</div>
+			<!-- /END FEEDBACKS -->
+
+		</div>
+		<!-- /END CONTAINER -->
+
+	</div>
+	<!-- /END COLOR OVERLAY -->
+
+</section>
+<!-- /END TESTIMONIALS SECTION -->
+
+
+<!-- =========================
+     SERVICES
+============================== -->
+<section class="services" id="services">
+
+	<div class="container">
+
+		<!-- SECTION HEADER -->
+		<div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+
+			<!-- SECTION TITLE -->
+			<h2 class="main-color">It's Awesome</h2>
+
+			<div class="section-description dark-text">
+				Energistically promote web-enabled interfaces and leveraged total linkage
+			</div>
+			<div class="line">
+			</div>
+
+		</div>
+		<!-- /END SECTION HEADER -->
+
+		<div class="row">
+
+			<!-- SINGLE SERVICE -->
+			<div class="col-md-4 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+
+				<!-- SERVICE ICON -->
+				<div class="service-icon">
+					<i class="icon_cloud-upload_alt"></i>
+				</div>
+
+				<!-- SERVICE HEADING -->
+				<h3>Your Data in Cloud</h3>
+
+				<!-- SERVICE DESCRIPTION -->
+				<p class="dark-text">
+					Quickly engineer principle-centered metrics without bricks-and-clicks channels. Distinctively predominate wireless systems via high-quality e-business. Professionally repurpose bricks-and-clicks supply chains after enabled internal or "organic" sources.
+				</p>
+
+			</div>
+			<!-- /END SINGLE SERVICE -->
+
+			<!-- SINGLE SERVICE -->
+			<div class="col-md-4 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+
+				<!-- SERVICE ICON -->
+				<div class="service-icon">
+					<i class="icon_gift_alt"></i>
+				</div>
+
+				<!-- SERVICE HEADING -->
+				<h3>Monthly Rewards</h3>
+
+				<!-- SERVICE DESCRIPTION -->
+				<p class="dark-text">
+					Quickly engineer principle-centered metrics without bricks-and-clicks channels. Distinctively predominate wireless systems via high-quality e-business. Professionally repurpose bricks-and-clicks supply chains after enabled internal or "organic" sources.
+				</p>
+
+			</div>
+			<!-- /END SINGLE SERVICE -->
+
+			<!-- SINGLE SERVICE -->
+			<div class="col-md-4 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+
+				<!-- SERVICE ICON -->
+				<div class="service-icon">
+					<i class="icon_chat_alt"></i>
+				</div>
+
+				<!-- SERVICE HEADING -->
+				<h3>24/7 Support</h3>
+
+				<!-- SERVICE DESCRIPTION -->
+				<p class="dark-text">
+					Quickly engineer principle-centered metrics without bricks-and-clicks channels. Distinctively predominate wireless systems via high-quality e-business. Professionally repurpose bricks-and-clicks supply chains after enabled internal or "organic" sources.
+				</p>
+
+			</div>
+			<!-- /END SINGLE SERVICE -->
+
+		</div>
+		<!-- /END ROW -->
+
+	</div>
+	<!-- /END CONTAINER -->
+
+</section>
+<!-- /END FEATURES SECTION -->
+
+
+
+
+
+<!-- =========================
+     FOOTER
+============================== -->
+<footer id="contact">
+	<div class="map container-fluid">
+		<div class="row">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.770634037845!2d105.81908145078299!3d21.041861592637453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab098269ab4d%3A0x5fb33a512785bf4!2zSG_DoG5nIEhvYSBUaMOhbSwgQsaw4bufaSwgQmEgxJDDrG5oLCBIw6AgTuG7mWksIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1447146990343"  class="col-md-12 col-lg-12 " frameborder="0" style="border:0" allowfullscreen></iframe>
+
+		</div>
+	</div>
+	<div class="container">
+
+		<div class="contact-box wow fadeInDown animated" data-wow-offset="10" data-wow-duration="1.5s">
+
+			<!-- CONTACT BUTTON TO EXPAND OR COLLAPSE FORM -->
+
+			<a class="btn contact-button expand-form expanded"><i class="icon_mail_alt"></i></a>
+
+			<!-- EXPANDED CONTACT FORM -->
+			<div class="row expanded-contact-form">
+
+				<div class="col-md-8 col-md-offset-2">
+
+					<!-- FORM -->
+					<form class="contact-form" id="contact" role="form">
+
+						<!-- IF MAIL SENT SUCCESSFULLY -->
+						<h4 class="success">
+							<i class="icon_check"></i> Your message has been sent successfully.
+						</h4>
+
+						<!-- IF MAIL SENDING UNSUCCESSFULL -->
+						<h4 class="error">
+							<i class="icon_error-circle_alt"></i> E-mail must be valid and message must be longer than 1
+							character.
+						</h4>
+
+						<div class="col-md-6">
+							<input class="form-control input-box" id="name" type="text" name="name"
+								   placeholder="Your Name">
+						</div>
+
+						<div class="col-md-6">
+							<input class="form-control input-box" id="email" type="email" name="email"
+								   placeholder="Your Email">
+						</div>
+
+						<div class="col-md-12">
+							<input class="form-control input-box" id="subject" type="text" name="subject"
+								   placeholder="Subject">
+                            <textarea class="form-control textarea-box" id="message" rows="8"
+									  placeholder="Message"></textarea>
+						</div>
+
+						<button class="btn btn-primary standard-button2 ladda-button" type="submit" id="submit"
+								name="submit" data-style="expand-left">Send Message
+						</button>
+
+					</form>
+					<!-- /END FORM -->
+
+				</div>
+
+			</div>
+			<!-- /END EXPANDED CONTACT FORM -->
+
+		</div>
+		<!-- /END CONTACT BOX -->
+
+		<div class="footer-share">
+			<!-- LOGO -->
+			<img src="/static/images/logo-color.png" alt="logo" class="responsive-img">
+
+			<!-- SOCIAL ICONS -->
+			<ul class="social-icons">
+				<li><a href=""><i class="social_facebook_square"></i></a></li>
+				<li><a href=""><i class="social_twitter_square"></i></a></li>
+				<li><a href=""><i class="social_pinterest_square"></i></a></li>
+				<li><a href=""><i class="social_googleplus_square"></i></a></li>
+				<li><a href=""><i class="social_instagram_square"></i></a></li>
+				<li><a href=""><i class="social_dribbble_square"></i></a></li>
+				<li><a href=""><i class="social_flickr_square"></i></a></li>
+			</ul>
+
+			<!-- COPYRIGHT TEXT -->
+			<p class="copyright">
+				�2015 Klouds, All Rights Reserved
+			</p>
+		</div>
+
+
+	</div>
+	<!-- /END CONTAINER -->
+
+</footer>
+<!-- /END FOOTER -->
+
+<div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" style="display: none">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="ModalLabel"> Form Login</h4>
+			</div>
+			<form method="POST" action="/user/login">
+				<div class="modal-body">
+					<ul class="list-inline">
+						<li>Twitter</li>
+						<li>Google</li>
+						<li>Github</li>
+						<li>Bitbuket</li>
+					</ul>
+					<div class="form-group">
+						<input type="text" class="form-control input-width" name="username"  id="username" value="{{.Username}}" placeholder="User name">
+					</div>
+					<div class="form-group">
+						<input type="password" id="password"  class="form-control  input-width"  name="password" placeholder="Password">
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="registerForm" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" style="display: none">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="ModalLabel"> Form Register</h4>
+			</div>
+			<form method="POST" action="/user/register">
+				<div class="modal-body">
+					<ul class="list-inline">
+						<li>Twitter</li>
+						<li>Google</li>
+						<li>Github</li>
+						<li>Bitbuket</li>
+					</ul>
+					<div class="form-group">
+						<input type="text" class="form-control input-width" name="firstname"  id="firstname" value="{{.FirstName}}" placeholder="First Name">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control input-width" name="lastname"  id="lastname" value="{{.Surname}}" placeholder="Surname">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control input-width" name="email"  id="email" value="{{.Email}}" placeholder="Email">
+					</div>
+
+					<div class="form-group">
+						<input type="password" id="password"  class="form-control  input-width"  name="password" placeholder="Password">
+					</div>
+					<div class="form-group">
+						<input type="password" id="confirmpassword"  class="form-control  input-width"  name="confirmpassword" placeholder="Re password">
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</div>
+

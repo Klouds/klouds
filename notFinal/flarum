@@ -1,0 +1,21 @@
+14{
+    "id":"flarum",
+    "cpus": 0.01,
+    "mem": 100.0,
+    "instances": 1,
+    "container": {
+      "type": "DOCKER",
+      "docker": {
+        "image": "sebp/flarum",
+        "network": "BRIDGE",
+        "portMappings": [
+          {
+            "containerPort": 80
+          }
+        ],
+        "privileged": true,
+        "parameters": [],
+        "forcePullImage": true
+      }
+    }
+}

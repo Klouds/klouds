@@ -1,0 +1,27 @@
+{
+    "id":"#USERNAME-tf2",
+    "cpus": 1,
+    "mem": 1000.0,
+    "instances": 1,
+    "container": {
+      "type": "DOCKER",
+      "docker": {
+        "image": "superordinate/docker-steamcmd-play:tf2",
+        "network": "BRIDGE",
+        "portMappings": [
+          {
+            "containerPort": 27015,
+            "protocol": "udp"
+          }
+        ],
+        "privileged": true,
+        "parameters": [],
+        "forcePullImage": true
+      }
+    },
+    "ports":[10000],
+    "labels": {
+        "HAPROXY_HTTP": "false",
+        "HTTP_PORT_IDX_0_NAME": "#USERNAME-tf2"
+    }
+}

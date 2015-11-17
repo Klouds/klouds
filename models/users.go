@@ -42,9 +42,9 @@ func (u *User) ValidateRegister() {
 			errorstring = errorstring + "Email is invalid. --"
 		}
 
-		sevenOrMore, upper, lower, special := VerifyPassword(u.Password)
-		if (!(sevenOrMore && upper && lower && special)) {
-			errorstring = errorstring + "Password must be at least 7 characters, one lower case, one upper case, one digit and one special character --"
+		tenOrMore, _, _, _ := VerifyPassword(u.Password)
+		if (!(tenOrMore)) {
+			errorstring = errorstring + "Password must be at least 10 characters long"
 		}
 
 		if (u.Password != u.ConfirmPassword) {
@@ -63,9 +63,9 @@ func (u *User) ValidateLogin() {
 		errorstring = errorstring + "Username is invalid. A-Za-z0-9 only. -- "
 	}
 
-	sevenOrMore, upper, lower, special := VerifyPassword(u.Password)
-	if (!(sevenOrMore && upper && lower && special)) {
-		errorstring = errorstring + "Password must be at least 7 characters, one lower case, one upper case, one digit and one special character --"
+	tenOrMore, _, _, _ := VerifyPassword(u.Password)
+	if (!(tenOrMore)) {
+		errorstring = errorstring + "Password must be at least 10 characters long"
 	}
 
 	u.Message = errorstring
@@ -77,9 +77,9 @@ func (u *User) ValidateLogin() {
 func (u *User) ValidateNewPassword() {
 	errorstring := "";
 
-	sevenOrMore, upper, lower, special := VerifyPassword(u.Password)
-	if (!(sevenOrMore && upper && lower && special)) {
-		errorstring = errorstring + "Password must be at least 7 characters, one lower case, one upper case, one digit and one special character --"
+	tenOrMore, _, _, _ := VerifyPassword(u.Password)
+	if (!(tenOrMore)) {
+		errorstring = errorstring + "Password must be at least 10 characters long"
 	}
 
 	if (u.Password != u.ConfirmPassword) {
@@ -116,23 +116,21 @@ func VerifyEmail(s string) bool {
 }
 
 //returns true when it contains each requirement.
-func VerifyPassword(s string) (sevenOrMore, number, upper, special bool) {
+func VerifyPassword(s string) (tenOrMore, number, upper, special bool) {
     letters := 0
     for _, s := range s {
         switch {
-        case unicode.IsNumber(s):
-            number = true
         case unicode.IsUpper(s):
             upper = true
             letters++
         case unicode.IsPunct(s) || unicode.IsSymbol(s):
             special = true
-        case unicode.IsLetter(s) || s == ' ':
+        case unicode.IsLetter(s) || unicode.IsNumber(s):
             letters++
         default:
             //return false, false, false, false
         }
     }
-    sevenOrMore = letters >= 7
+    tenOrMore = letters >= 10
     return
 }

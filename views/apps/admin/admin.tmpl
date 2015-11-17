@@ -1,4 +1,4 @@
-{{template "header" .}}
+    {{template "apps/header" (index . 0).User}}
 <!-- Page Content -->
     <div class="container">
 
@@ -18,13 +18,39 @@
                     <a href="/admin/newapp"> Click here </a>
         </div>
 
-        <hr class="featurette-divider">
+      {{range $index, $element := .}}
+                 {{if eq (mod $index 4) 0}}
+                     <div class="row">
+                 {{end}}
+                     {{if ne .Name ""}}
+                         <div class="col-md-3 portfolio-item">
+                         <table style="width:100%">
+                             <tr>
+                                 <td>
+                                 {{.Name}}<br>
+                                     {{if eq .IsRunning true}}
+                                     <a href="http://{{.AccessUrl}}">Access Here!</a><br>
+                                     {{else}}
+                                     <a href="#">Application Still Launching!</a><br>
+                                     {{end}}
+                                     <br>
+                                     <a href="/user/apps/deleteapp/{{.Name}}"><img src="/images/trashicon.png" style="width:25px; height:25px;" alt="trash" /></a>
+                                 </td>
+                                 <td style="text-align:right">
+                                     <img style="width:100px; height:100px;" src="{{.Logo}}" alt="Logo not found"/>
+                                 </td>
+                             </tr>
+                         </table>
 
-        <!-- New Application Button -->
-        <div class="featurette">
+                         </div>
+                      {{end}}
+
+                 {{if eq (mod $index 4) 3}}
+                     </div>
+                 {{end}}
 
 
-        <hr class="featurette-divider">
+             {{end}}
 
         <!-- Footer -->
         {{template "footer"}}

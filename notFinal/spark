@@ -1,0 +1,21 @@
+14{
+    "id":"spark",
+    "cpus": 0.01,
+    "mem": 100.0,
+    "instances": 1,
+    "container": {
+      "type": "DOCKER",
+      "docker": {
+        "image": "sequenceiq/spark",
+        "network": "BRIDGE",
+        "portMappings": [
+          {
+            "containerPort": 8042
+          }
+        ],
+        "privileged": true,
+        "parameters": [],
+        "forcePullImage": true
+      }
+    }
+}
