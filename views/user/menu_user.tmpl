@@ -1,0 +1,26 @@
+
+    <!-- NAVIGATION -->
+    <nav class="navbar bg-color1 dark-bg" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand smooth" href="#"><img src="/images/logo.png" height="25" alt="Your logo"></a>
+            <button class="round-toggle navbar-toggle menu-collapse-btn collapsed" data-toggle="collapse"
+                    data-target=".navMenuCollapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span></button>
+            <div class="collapse navbar-collapse navMenuCollapse">
+            <div class="login-panel">
+            
+                  <form method="POST" action="/user/logout">
+                                            <button type="submit" class=" btn btn-lg btn-block btn-success btn-logout">Log Out</button>
+                                        </form>
+                </div>
+                <ul class="nav">
+                    <li><a href="/">Home</a></li>
+                     <li><a href="/admin">Admin</a></li>
+                    <li><a href="/user/apps">Applications</a></li>
+                    <li><a href="/user/profile">Profiles</a></li>
+                    <li><a href="/user/history">History</a></li>
+                    <li><a href="/user/billing">Billing</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
