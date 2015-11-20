@@ -15,8 +15,11 @@
                 </div>
                 <ul class="nav">
                     <li><a href="/">Home</a></li>
-                     <li><a href="/admin">Admin</a></li>
-                    <li><a href="/user/apps">Applications</a></li>
+                    {{if eq .Role "admin"}}
+                        <li><a href="/admin">Admin</a></li>
+                    {{end}}
+                    <li><a href="/apps">Application List</a></li>
+                    <li><a href="/user/apps">Your Applications</a></li>
                     <li><a href="/user/profile">Profiles</a></li>
                     <li><a href="/user/history">History</a></li>
                     <li><a href="/user/billing">Billing</a></li>
