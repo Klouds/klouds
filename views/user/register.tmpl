@@ -1,98 +1,66 @@
-{{template "header" .}}
+{{template "header"}}
+<body data-spy="scroll" data-target=".navMenuCollapse">
 
-<div class="container">
+<div id="page-register">
 
-    <hr class="featurette-divider">
+   {{template "menu_common"}}
 
-    <!-- First Featurette -->
-    <div class="featurette">
-		<h1 class="featurette-heading">Register</h1>
-		<b><i><font color="red">{{.Message}}</font></i></b>
-		<table>
-		 	<col width="40%">
-  			<col width="20%">
-			<tr>
-				<form method="POST" action="/user/register">
-				<td>
-			     	<label for="username">User name</label>
-			     </td><td>&nbsp;</td><td>
-			    	<input type="text" id="username" name="username" value="{{.Username}}"><br>
-		    	</td>
-			</tr>
-			<tr>
-		    	<td>
-		    		<label for="firstname">First Name</label>
-		    	</td>
-		    	<td>
-		    		&nbsp;
-		    	</td>
-		    	<td>
-		    		<input type="text" id="firstname" name="firstname" value="{{.FirstName}}"><br>
-		    	</td>
-		    </tr><tr>
-		    	<td>
-		    		<label for="lastname">Last Name</label>
-		    	</td>
-		    	<td>
-		    		&nbsp;
-		    	</td>
-		    	<td>
-		    		<input type="text" id="lastname" name="lastname" value="{{.Surname}}"><br>
-		    	</td>
-		    </tr><tr>
-		    	<td>
-		    		<label for="email">Email Address</label>
-		    	</td>
-		    	<td>
-		    		&nbsp;
-		    	</td>
-		    	<td>
-		    		<input type="text" id="email" name="email" value="{{.Email}}"><br>
-		    	</td>
-		    </tr><tr>
-		    	<td>
-		    		<label for="password">Password</label>
-		    	</td>
-		    	<td>
-		    		&nbsp;
-		    	</td>
-		    	<td>
-		    		<input type="password" id="password" name="password"><br>
-		    	</td>
+	<!-- LOGIN BLOCK-->
+    <section id="page-register" class="intro-block bg-color1 cover-bg" style="background-image:url(/images/bg13.jpg)">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 dark-bg">
+						<div class="slogan">
+							<h1>The Start<br><b>For Your App</b></h1>
+						</div>
+						<ul class="item-list-left item-list-small item-list">
+							<li>
+								<i class="num-icon">1</i>
+								<p>Conveniently simplify inexpensive alignments with long-term high-impact scenarios.</p>
+							</li>
+							<li>
+								<i class="num-icon">2</i>
+								<p>Conveniently simplify inexpensive alignments with long-term high-impact scenarios.</p>
+							</li>
+							<li>
+								<i class="num-icon">3</i>
+								<p>Conveniently simplify inexpensive alignments with long-term high-impact scenarios.</p>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-5 col-md-offset-1">
+						<div class="form-container">
+							<h3 class="title">Log in to your account</h3>
+							<form method="POST" action="/user/login" role="form" id="contact_form" novalidate="novalidate">
+								<p class="text-center"><b><i><font color="red">{{.Message}}</font></i></b></p>
+								<div class="form-group">
+									<input type="text" class="form-control" id="username" placeholder="User Name" value="{{.Username}}" name="username">
+				
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" id="password" placeholder="Password" name="password">
+								</div>
+								<button type="submit" id="loginSubmit" data-loading-text="•••" class="btn btn-lg btn-block btn-primary">Login</button>
+								<a  id="registerSubmit"  href="/user/register" class="btn btn-lg btn-block btn-link">Not account ?	Register</a>
+								<a  id="forgetSubmit"  href="/user/forgetpassword" class="btn btn-lg btn-block btn-link">Forget Password</a>
+							</form>
+						</div>
+				
+						<div class="form-container">
+							<ul class="list-inline text-center social-login">
+								<li><i class="icon-social-twitter icon"></i></li>
+								<li><i class="icon-googleplus icon"></i></li>
+								<li><i class="icon-social-facebook icon"></i></li>
+							</ul>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+   {{template "footer"}}
 
-		    </tr><tr>
-			    <td>
-			     	<label for="confirmpassword">Confirm Password</label>
-			    </td>
-			    <td>
-			    	&nbsp;
-			    </td>
-			    <td>
-			    	<input type="password" id="confirmpassword" name="confirmpassword"><br>
-			    </td>
-			</tr><tr>
-				<td>
-					&nbsp;
-				</td>
-				<td>
-					&nbsp;
-				</td>
-				<td>
-			    	<button type="submit" value="Register">Register</button>
-			    </td>
-				</form>
-			</tr>
-		</table>
-		<br><br><br>
-		<table>
-			<tr>
-				<td>
-		    		<img src="http://imgs.xkcd.com/comics/password_strength.png" alt='password strength' />
-		    	</td>
-
-			</tr>
-		</table>
-	</div>
 </div>
-
-{{template "footer"}}
+{{template "script".}}
+</body>
+</html>

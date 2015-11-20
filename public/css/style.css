@@ -18,6 +18,14 @@ body {
 }
 
 
+section, header {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-bottom: 1px solid #e8e8e8;
+}
 
 section.dark-bg,
 header.dark-bg,
