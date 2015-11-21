@@ -29,3 +29,29 @@ func (c *SiteNavController) Index(rw http.ResponseWriter, r *http.Request, p htt
 			c.HTML(rw, http.StatusOK, "index", nil)
 		}
 }
+
+
+func (c *SiteNavController) About(rw http.ResponseWriter,r *http.Request,p httprouter.Params){
+	c.HTML(rw,http.StatusOK,"about",nil)
+
+}
+func (c *SiteNavController) Customer(rw http.ResponseWriter,r *http.Request,p httprouter.Params)  {
+	c.HTML(rw,http.StatusOK,"customer",nil)
+
+}
+func (c *SiteNavController) Pricing(rw http.ResponseWriter,r *http.Request,p httprouter.Params){
+	c.HTML(rw,http.StatusOK,"pricing",nil)
+
+}
+func (c *SiteNavController) Contact(rw http.ResponseWriter,r *http.Request,p httprouter.Params)  {
+
+	c.HTML(rw,http.StatusOK,"contact",nil)
+
+}
+func  (c *SiteNavController) Supporting(rw http.ResponseWriter,r *http.Request,p httprouter.Params)  {
+	c.HTML(rw,http.StatusOK,"supporting",nil)
+
+}
+func (c *SiteNavController) Blog(rw http.ResponseWriter,r *http.Request,p httprouter.Params){
+	c.HTML(rw,http.StatusOK,"blog",nil)
+}

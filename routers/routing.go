@@ -41,8 +41,15 @@ func (r *Routing) Init() {
 	c := &controllers.SiteNavController{Render: r.Render}
 	u := &controllers.UserController{Render: r.Render}
 	a := &controllers.ApplicationsController{Render: r.Render}
-	
+
+	//CMS Page
 	r.Mux.GET("/", c.Index)
+	r.Mux.GET("/about", c.About)
+	r.Mux.GET("/our-customers", c.Customer)
+	r.Mux.GET("/pricing", c.Pricing)
+	r.Mux.GET("/contact-us", c.Contact)
+	r.Mux.GET("/supporting", c.Supporting)
+	r.Mux.GET("/blog", c.Blog)
 
 	//User Pages
 	r.Mux.GET("/user", u.Login)
