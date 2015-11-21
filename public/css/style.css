@@ -19,12 +19,12 @@ body {
 
 
 section, header {
-    padding-top: 150px;
-    padding-bottom: 150px;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    border-bottom: 1px solid #e8e8e8;
+	padding-top: 150px;
+	padding-bottom: 150px;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	border-bottom: 1px solid #e8e8e8;
 }
 
 section.dark-bg,
@@ -1628,6 +1628,12 @@ nav#navbar  .navbar-toggle.round-toggle .icon-bar + .icon-bar {
 		padding-top: 0;
 	}
 }
+
+#page-customer #clients.clients-block{
+	border-bottom:4px solid #fff;
+
+}
+
 /*============================== TEAMS ========================================*/
 #team.team-block{
 	padding-bottom: 0;
@@ -1779,7 +1785,7 @@ footer#footer img.logo {
 
 #updateForm .form-group {
 	margin: 10px 0 ;
-   border-bottom: 1px solid rgba(0, 0, 0, 0.07); 
+	border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
 
 #updateForm .form-control {
@@ -1837,16 +1843,119 @@ section#login {
 	display: none !important;
 }
 #page-login #login ul li{
-	    padding-bottom: 30px;
-	    padding: 0 45px 60px 75px;
-	    text-align: left;
+	padding-bottom: 30px;
+	padding: 0 45px 60px 75px;
+	text-align: left;
 }
 
 
 
+/*------------------------------------------PRICING----------------------------------------------*/
 
-/*----------------------------------------------------------------------------------------
-/*----------------------------------------------------------------------------------------
+#pricing .pricing-table {
+	position: relative;
+	border: 1px solid rgba(0,0,0,0.1);
+	text-align: center;
+	background: #fff;
+	-webkit-transition: all 0.25s ease-out;
+	-moz-transition: all 0.25s ease-out;
+	-ms-transition: all 0.25s ease-out;
+	-o-transition: all 0.25s ease-out;
+	transition: all 0.25s ease-out;
+}
+
+#pricing  .pricing-table:hover {
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+	-webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+	-moz-box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+	-ms-box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+	-o-box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+}
+
+#pricing .pricing-table .best-choice {
+	position: absolute;
+	right: -10px;
+	top: 70px;
+	overflow: hidden;
+	background: #FF5722;
+	color: #FFFFFF;
+	height: 90px;
+	width: 90px;
+	padding: 5px;
+	border-radius: 50%;
+	border: 2px solid #FF5722;
+	font-weight: bold;
+	line-height: 1;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+#pricing  .pricing-table .best-choice .icon {
+	display: block;
+	font-size: 32px;
+	margin: 5px 0;
+}
+
+#pricing  .pricing-table h4 {
+	display: block;
+	padding: 40px 0;
+	margin: 0;
+	font-weight: bolder;
+	background-color: #1565c0;
+	color: #fff;
+}
+
+#pricing  .pricing-table span {
+	display: block;
+	font-weight: bold;
+	font-size: 50px;
+	padding: 40px 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: #fff;
+}
+
+#pricing .pricing-table span.clean {
+	padding-bottom: 0;
+}
+
+#pricing .pricing-table span small {
+	opacity: 0.5;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+#pricing  .list-unstyled {
+	display: inline-block;
+	margin: 50px 35px;
+	text-align: left;
+}
+
+#pricing  .pricing-table .btn {
+	display: block;
+	margin: 0 35px 35px 35px;
+	padding: 12px;
+}
+
+#pricing  .list-unstyled li {
+	padding: 6px 0;
+}
+
+#pricing .list-unstyled li.not {
+	opacity: 0.1;
+}
+
+#pricing .pricing-table p {
+	margin: 50px 35px;
+}
+
+
+/*-------------------------------------CONTACT PAGE---------------------------------------------------*/
+#contact-page{
+
+}
+
 /*----------------------------------------------------------------------------------------
 /*----------------------------------------------------------------------------------------
 /*----------------------------------------------------------------------------------------
@@ -1875,110 +1984,6 @@ section#login {
 	padding: 100px 0;
 }
 
-/*----------------------------------------------------------------------------------------
-						PRICING TABLES BLOCK STYLES
-----------------------------------------------------------------------------------------*/
-
-.pricing-table {
-	position: relative;
-	border: 1px solid rgba(0,0,0,0.1);
-	text-align: center;
-	background: #fff;
-	-webkit-transition: all 0.25s ease-out;
-	-moz-transition: all 0.25s ease-out;
-	-ms-transition: all 0.25s ease-out;
-	-o-transition: all 0.25s ease-out;
-	transition: all 0.25s ease-out;
-}
-
-.pricing-table:hover {
-	box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
-	-webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
-	-moz-box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
-	-ms-box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
-	-o-box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
-}
-
-.pricing-table .stamp {
-	position: absolute;
-	right: -10px;
-	top: 70px;
-	overflow: hidden;
-	background: #fff698;
-	color: #ffab40;
-	height: 90px;
-	width: 90px;
-	padding: 5px;
-	border-radius: 50%;
-	border: 2px solid #ffca28;
-	font-weight: bold;
-	line-height: 1;
-	font-size: 14px;
-	text-transform: uppercase;
-}
-
-.pricing-table .stamp .icon {
-	display: block;
-	font-size: 32px;
-	margin: 5px 0;
-}
-
-.pricing-table h4 {
-	display: block;
-	padding: 40px 0;
-	margin: 0;
-	font-weight: bolder;
-}
-
-.pricing-table span {
-	display: block;
-	font-weight: bold;
-	font-size: 50px;
-	padding: 40px 0;
-}
-
-.pricing-table span.clean {
-	padding-bottom: 0;
-}
-
-.pricing-table span small {
-	opacity: 0.5;
-	font-weight: normal;
-	font-size: 14px;
-}
-
-.benefits-list {
-	display: inline-block;
-	margin: 50px 35px;
-	text-align: left;
-}
-
-.pricing-table .btn {
-	display: block;
-	margin: 0 35px 35px 35px;
-	padding: 12px;
-}
-
-.benefits-list li {
-	padding: 6px 0;
-}
-
-.benefits-list li.not {
-	opacity: 0.1;
-}
-
-.pricing-table p {
-	margin: 50px 35px;
-}
-
-.dark-bg .pricing-table {
-	border-color: transparent;
-	background: rgba(0,0,0,0.25);
-}
-
-.dark-bg .pricing-table p {
-	opacity: 0.7;
-}
 
 /*----------------------------------------------------------------------------------------
 						SUBSCRIBE BLOCK STYLES
