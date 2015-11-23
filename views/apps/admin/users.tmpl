@@ -1,19 +1,14 @@
     {{template "header"}}
 
-    {{template "menu" (index . 0).User}}
+    {{template "menu" (index . 0) }}
 
     <!-- Page Content -->
     <div class="container">
-    {{if eq (index . 0).User.Role "admin"}}
-        <div class="featurette">
-            <h3 class="featurette-heading"> Create Application </h3><br>
-                    <a href="/admin/6"> Click here </a>
-        </div>
-    {{end}}
+
         <!-- Page Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Running Application List
+                <h1 class="page-header">User List
                     <small></small>
                 </h1>
             </div>
@@ -27,9 +22,11 @@
                 <div class="row">
             {{end}}
                     <div class="col-md-3 portfolio-item">
-                        <a href="/apps/app/{{.Name}}">
-                            <img class="img-responsive" style="width:300px; height:250px;" src="{{.Logo}}" alt="{{.Name}}">
-                        </a>
+                        {{.Id}}<br>
+                        <a href="/admin/users/{{.Username}}"> {{.Username}} </a><br>
+                        {{.Email}}<br>
+                        {{.FirstName}} {{.Surname}} <br>
+                        Active: {{.IsEnabled}}
                     </div>
 
             {{if eq (mod $index 4) 3}}

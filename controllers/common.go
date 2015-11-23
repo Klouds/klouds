@@ -134,17 +134,6 @@ func InitDB() {
 
 /* HELPER FUNCTIONS */
 
-//Checks if user is admin and redirects to login page if s/he isn't
-func NotAdministrator(user *models.User, c *ApplicationsController, rw http.ResponseWriter) bool {
-
-	if user.Role != "admin"{
-		user.Message = "You are not an administrator."
-		c.HTML(rw, http.StatusOK, "user/login", user)
-		return true
-	} else {
-		return false
-	}
-}
 
 //strips all whitespace out of a string
 func stripSpaces(str string) string {
@@ -193,6 +182,18 @@ func CheckForMatchingPassword(u *models.User) bool {
 
 	return newUser.Password == u.Password
 } 
+
+//Get All Users
+func GetUsers(u *[]models.User) {
+	fmt.Println("Getting list of all applications")
+
+	//Returns a list of all applications 
+	userlist := []models.User{}
+
+	db.Find(&userlist)
+	//makes the list externally available
+	*u = userlist
+}
 
 //Get User
 func GetUserByUsername(username string) *models.User {
