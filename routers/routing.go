@@ -41,6 +41,7 @@ func (r *Routing) Init() {
 	c := &controllers.SiteNavController{Render: r.Render}
 	u := &controllers.UserController{Render: r.Render}
 	a := &controllers.ApplicationsController{Render: r.Render}
+	au := &controllers.AuthorizeSocialController{Render: r.Render}
 
 	//CMS Page
 	r.Mux.GET("/", c.Index)
@@ -62,6 +63,8 @@ func (r *Routing) Init() {
 	r.Mux.GET("/user/login", u.Login)
 	r.Mux.GET("/user/profile", u.Profile)
 	r.Mux.POST("/user/profile", u.Profile)
+	r.Mux.GET("/user/github/login",au.HandleGitHubLogin)
+	r.Mux.GET("/user/github/callback",au.HandleGitHubCallback)
 
 	//Application Pages
 	r.Mux.GET("/apps/list", a.ApplicationList)
