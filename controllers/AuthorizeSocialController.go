@@ -13,6 +13,8 @@ type AuthorizeSocialController struct {
 	AppController
 	*render.Render
 }
+
+
 var (
 	oauthConf = &oauth2.Config{
 		ClientID:     "fc707d20633ddddc6a25",
@@ -22,10 +24,37 @@ var (
 	}
 	oauthStateString = "kloudgithublogin39"
 )
-func (au AuthorizeSocialController)  HandleGitHubLogin(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+func (au AuthorizeSocialController) HandleGitHubLogin(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	url := oauthConf.AuthCodeURL(oauthStateString, oauth2.AccessTypeOnline)
 	http.Redirect(w, r, url, http.StatusTemporaryRedirect)
 }
+func (au AuthorizeSocialController) HandleFaceBookLogin(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+
+		oauthConf = &oauth2.Config{
+			ClientID:     "keygen",
+			ClientSecret: "keygen",
+			Scopes:       []string{"user:email", "repo"},
+			Endpoint:     githuboauth.Endpoint,
+		}
+
+		oauthStateString = "kloudfacebooklogin39"
+	url := oauthConf.AuthCodeURL(oauthStateString, oauth2.AccessTypeOnline)
+	http.Redirect(w, r, url, http.StatusTemporaryRedirect)
+}
+func (au AuthorizeSocialController) HandleGoogleLogin(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+
+	oauthConf = &oauth2.Config{
+		ClientID:     "keygen",
+		ClientSecret: "keygen",
+		Scopes:       []string{"user:email", "repo"},
+		Endpoint:     githuboauth.Endpoint,
+	}
+
+	oauthStateString = "kloudgooglelogin39"
+	url := oauthConf.AuthCodeURL(oauthStateString, oauth2.AccessTypeOnline)
+	http.Redirect(w, r, url, http.StatusTemporaryRedirect)
+}
+
 func (au AuthorizeSocialController) HandleGitHubCallback(w http.ResponseWriter, r *http.Request,_ httprouter.Params) {
 
 	state := r.FormValue("state")
@@ -71,5 +100,11 @@ func (au AuthorizeSocialController) HandleGitHubCallback(w http.ResponseWriter, 
 		newUser.Message = "User: " + newUser.Username + " already exists."
 	}
 	http.Redirect(w, r, "/user/login", http.StatusTemporaryRedirect)
+
+}
+func (au AuthorizeSocialController) HandleFacebookCallback(w http.ResponseWriter, r *http.Request,_ httprouter.Params) {
+
+}
+func (au AuthorizeSocialController) HandleGoogleCallback(w http.ResponseWriter, r *http.Request,_ httprouter.Params) {
 
 }
