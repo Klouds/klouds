@@ -21,21 +21,21 @@ func (r *Routing) Init() {
 	controllers.Init()
 	r.Render = render.New(render.Options{Directory: "views",
 		Funcs: []template.FuncMap{
-        {
+			{
 
-            "str2html": func(raw string) template.HTML {
-            	fmt.Println(raw)
-                return template.HTML(raw)
-            },
-            "add": func(x,y int) int {
-                return x + y
-            },
-            "mod": func(x,y int) int {
-                return x % y
-            },
-        },
-    },
-    })
+				"str2html": func(raw string) template.HTML {
+					fmt.Println(raw)
+					return template.HTML(raw)
+				},
+				"add": func(x,y int) int {
+					return x + y
+				},
+				"mod": func(x,y int) int {
+					return x % y
+				},
+			},
+		},
+	})
 	r.Mux = httprouter.New()
 
 	c := &controllers.SiteNavController{Render: r.Render}
@@ -85,6 +85,6 @@ func (r *Routing) Init() {
 	r.Mux.POST("/apps/app/:appID/edit", a.EditApplication)
 	r.Mux.GET("/admin/newapp", a.CreateApplication)
 	r.Mux.POST("/admin/newapp", a.CreateApplication)
-	
+
 	r.Mux.NotFound = http.FileServer(http.Dir("public"))
 }
