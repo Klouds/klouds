@@ -3,46 +3,45 @@
 
 <div id="page-login">
 
-   {{template "menu" .}}
+	{{template "menu" .}}
 
 	<!-- LOGIN BLOCK-->
-    <section id="login" class="login-block">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3">
-						<div class="title">
-							<h1>Start Using Your App</h1>
-						</div>
-						<div class="form-container">
-							<form method="POST" action="/user/login" role="form" id="formLogin" novalidate="novalidate">
-								<p class="text-center"><b><i><font color="red">{{.Message}}</font></i></b></p>
-								<div class="form-group">
-									<input type="text" class="form-control" id="username" placeholder="User Name" value="{{.Username}}" name="username">
-				
-								</div>
-								<div class="form-group">
-									<input type="password" class="form-control" id="password" placeholder="Password" name="password">
-								</div>
-								<button type="submit" id="loginSubmit" data-loading-text="•••" class="btn btn-lg btn-block btn-primary">Login</button>
-								<a  id="registerSubmit"  href="/user/register" class="btn btn-lg btn-block btn-link">Not account ?	Register</a>
-								<a  id="forgetSubmit"  href="/user/forgetpassword" class="btn btn-lg btn-block btn-link">Forget Password</a>
-							</form>
-						</div>
-				
-						<div class="form-container">
-							<ul class="list-inline text-center social-login">
+	<section id="login" class="login-block">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="title">
+						<h1>Start Using Your App</h1>
+					</div>
+					<div class="form-container">
+						<form method="POST" action="/user/login" role="form" id="formLogin" novalidate="novalidate">
+							<p class="text-center"><b><i><font color="red">{{.Message}}</font></i></b></p>
+							<div class="form-group">
+								<input type="text" class="form-control" id="username" placeholder="User Name" value="{{.Username}}" name="username">
 
-								<li><a href="/user/auth/github"><i class="icon-social-twitter icon"></i></a></li>
-								<li><a href="/user/auth/gplus"><i class="icon-googleplus icon"></i></a></li>
-								<li><a href="/user/auth/facebook"><i class="icon-social-facebook icon"></i></a></li>
-							</ul>
-							
-						</div>
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" id="password" placeholder="Password" name="password">
+							</div>
+							<button type="submit" id="loginSubmit" data-loading-text="•••" class="btn btn-lg btn-block btn-primary">Login</button>
+							<a  id="registerSubmit"  href="/user/register" class="btn btn-lg btn-block btn-link">Not account ?	Register</a>
+							<a  id="forgetSubmit"  href="/user/forgetpassword" class="btn btn-lg btn-block btn-link">Forget Password</a>
+						</form>
+					</div>
+
+					<div class="form-container">
+						<ul class="list-inline text-center social-login">
+							<li><a href="/user/auth/github"><i class="icon-social-twitter icon"></i></a></li>
+							<li><a href="/user/auth/gplus"><i class="icon-googleplus icon"></i></a></li>
+							<li><a href="/user/auth/facebook"><i class="icon-social-facebook icon"></i></a></li>
+						</ul>
+
 					</div>
 				</div>
 			</div>
-		</section>
-   {{template "footer"}}
+		</div>
+	</section>
+	{{template "footer"}}
 
 </div>
 {{template "script".}}
