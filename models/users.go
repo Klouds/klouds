@@ -9,11 +9,13 @@ import (
 type User struct {
   Id       	int64
   Username 	string	`sql:"size:255; not null; unique;"`
-  Email		string 	`sql:"size:255; not null; unique;"` 
-  FirstName	string	`sql:"size:30; not null;"`
-  Surname 	string 	`sql:"size:30; not null;"`   
-  Password 	string 	`sql:"size:255; not null;"`
-  Role 		string 	`sql:"size:30"` 
+  Email		string 	`sql:"size:255; unique;"`
+  FirstName	string	`sql:"size:30;"`
+  Surname 	string 	`sql:"size:30;"`
+  Password 	string 	`sql:"size:255;"`
+  Provider 	string 	`sql:"size:255;"`
+  ProviderID 	int64
+  Role 		string 	`sql:"size:30"`
   IsEnabled	bool 	`sql:"default:true"`
   	ConfirmPassword 	string 	`sql:"-"`	//These dont get put in the database
   	Message				string 	`sql:"-"`	//These dont get put in the database

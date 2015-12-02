@@ -63,8 +63,15 @@ func (r *Routing) Init() {
 	r.Mux.GET("/user/login", u.Login)
 	r.Mux.GET("/user/profile", u.Profile)
 	r.Mux.POST("/user/profile", u.Profile)
-	r.Mux.GET("/user/github/login",au.HandleGitHubLogin)
-	r.Mux.GET("/user/github/callback",au.HandleGitHubCallback)
+
+	r.Mux.GET("/user/auth/github",au.HandleAuthGithubLogin)
+	r.Mux.GET("/user/auth/gplus",au.HandleAuthGplusLogin)
+	r.Mux.GET("/user/auth/facebook",au.HandleAuthFacebookLogin)
+	r.Mux.GET("/user/auth/github/callback",au.HandleAuthGitHubCallback)
+	r.Mux.GET("/user/auth/gplus/callback",au.HandleAuthGplusCallback)
+	r.Mux.GET("/user/auth/facebook/callback",au.HandleAuthFacebookCallback)
+
+
 
 	//Application Pages
 	r.Mux.GET("/apps/list", a.ApplicationList)
