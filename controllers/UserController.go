@@ -139,7 +139,7 @@ func (c *UserController) Profile(rw http.ResponseWriter, r *http.Request, p http
 			user = GetUserByUsername(getUserName(r))
 			
 		} else {
-			c.HTML(rw, http.StatusOK, "user/login", nil)
+			redirect(rw,r,"user/login")
 			return
 		}
 
@@ -162,20 +162,18 @@ func (c *UserController) Profile(rw http.ResponseWriter, r *http.Request, p http
 			user.ValidateNewPassword()
 
 			if user.Message != "" {
-				c.HTML(rw, http.StatusOK, "user/profile", user)
+				redirect(rw,r,"user/profile")
 				return
 			} else {
 				user.Message = "Updated user"
 				UpdateUser(user)
-				c.HTML(rw, http.StatusOK, "user/profile", user)
+				redirect(rw,r,"user/profile")
 				return
 			}
 			
-
 		} else {
 			user.Message = "Password doesn't match record for " + user.Username
 		}
-
 		c.HTML(rw, http.StatusOK, "user/profile", user)
 	}
 }
