@@ -1,6 +1,7 @@
 package controllers
 
 import (
+
 	"gopkg.in/unrolled/render.v1"
 	"github.com/julienschmidt/httprouter"
 	"net/http"
@@ -23,7 +24,6 @@ type AuthorizeSocialController struct {
 
 
 var (
-
 	stateAuth = "kloudstate39"
 	facebookCallBack = "http://localhost:1337/user/auth/facebook/callback"
 	endpointFBProfile = "https://graph.facebook.com/me?fields=email"
@@ -90,10 +90,10 @@ func (au AuthorizeSocialController) HandleAuthGitHubCallback(rw http.ResponseWri
 	if err != nil {
 		fmt.Println(err)
 	}
-	v, err := jason.NewObjectFromBytes(bits)
-	id, _ := v.GetString("id")
-	email, _ := v.GetString("email")
-	username, _ := v.GetString("login")
+	v,err := jason.NewObjectFromBytes(bits)
+	id,_:= v.GetString("id")
+	email,_:= v.GetString("email")
+	username,_:= v.GetString("login")
 	pid, _ := strconv.ParseInt(id, 10, 64)
 
 	newUser := &models.User{
@@ -101,7 +101,7 @@ func (au AuthorizeSocialController) HandleAuthGitHubCallback(rw http.ResponseWri
 		Provider: "gplus",
 		ProviderID:pid,
 	}
-	if email != "" {
+	if email != ""{
 		newUser.Email = email
 	}
 
@@ -138,9 +138,9 @@ func (au AuthorizeSocialController) HandleAuthGplusCallback(rw http.ResponseWrit
 	if err != nil {
 		fmt.Println(err)
 	}
-	v, err := jason.NewObjectFromBytes(bits)
-	id, _ := v.GetString("id")
-	email, _ := v.GetString("email")
+	v,err := jason.NewObjectFromBytes(bits)
+	id,_:= v.GetString("id")
+	email,_:= v.GetString("email")
 	pid, _ := strconv.ParseInt(id, 10, 64)
 
 	newUser := &models.User{
@@ -148,9 +148,9 @@ func (au AuthorizeSocialController) HandleAuthGplusCallback(rw http.ResponseWrit
 		Provider: "gplus",
 		ProviderID:pid,
 	}
-	if email != "" {
+	if email != ""{
 		newUser.Email = email
-		e := strings.Split(email, "@")
+		e := strings.Split(email,"@")
 		newUser.Username = e[0]
 	}
 
@@ -185,9 +185,9 @@ func (au AuthorizeSocialController) HandleAuthFacebookCallback(rw http.ResponseW
 		fmt.Println(err)
 	}
 
-	v, err := jason.NewObjectFromBytes(bits)
-	id, _ := v.GetString("id")
-	email, _ := v.GetString("email")
+	v,err := jason.NewObjectFromBytes(bits)
+	id,_:= v.GetString("id")
+	email,_:= v.GetString("email")
 	pid, _ := strconv.ParseInt(id, 10, 64)
 
 	newUser := &models.User{
@@ -195,9 +195,9 @@ func (au AuthorizeSocialController) HandleAuthFacebookCallback(rw http.ResponseW
 		Provider: "facebook",
 		ProviderID:pid,
 	}
-	if email != "" {
+	if email != ""{
 		newUser.Email = email
-		e := strings.Split(email, "@")
+		e := strings.Split(email,"@")
 		newUser.Username = e[0]
 
 	}
@@ -218,3 +218,4 @@ func (au AuthorizeSocialController) HandleAuthFacebookCallback(rw http.ResponseW
 	redirect(rw, r, "/user/login")
 	return
 }
+
