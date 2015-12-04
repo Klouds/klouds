@@ -42,6 +42,7 @@ func (r *Routing) Init() {
 	u := &controllers.UserController{Render: r.Render}
 	a := &controllers.ApplicationsController{Render: r.Render}
 	au := &controllers.AuthorizeSocialController{Render: r.Render}
+	ts := &controllers.TransactionsController{Render: r.Render}
 
 	//CMS Page
 	r.Mux.GET("/", c.Index)
@@ -71,6 +72,11 @@ func (r *Routing) Init() {
 	r.Mux.GET("/user/auth/gplus/callback",au.HandleAuthGplusCallback)
 	r.Mux.GET("/user/auth/facebook/callback",au.HandleAuthFacebookCallback)
 
+	//Transaction
+	r.Mux.GET("/user/billing",ts.Index)
+	r.Mux.GET("/user/paymentcancelreturn",ts.PaymentCancelReturn)
+	r.Mux.GET("/user/paymentsuccess",ts.PaymentSuccess)
+	r.Mux.GET("/user/ipn",ts.IpnVerified)
 
 
 	//Application Pages
