@@ -43,6 +43,7 @@ func (r *Routing) Init() {
 	a := &controllers.ApplicationsController{Render: r.Render}
 	au := &controllers.AuthorizeSocialController{Render: r.Render}
 	ts := &controllers.TransactionsController{Render: r.Render}
+	bk := &controllers.TransactionBaoKimController{Render: r.Render}
 
 	//CMS Page
 	r.Mux.GET("/", c.Index)
@@ -91,6 +92,11 @@ func (r *Routing) Init() {
 	r.Mux.POST("/apps/app/:appID/edit", a.EditApplication)
 	r.Mux.GET("/admin/newapp", a.CreateApplication)
 	r.Mux.POST("/admin/newapp", a.CreateApplication)
+
+	//PAYGAT BaoKim
+	r.Mux.GET("/baokim/index", bk.Index)
+	r.Mux.GET("/baokim/request", bk.CreateRequestUrl)
+	r.Mux.GET("/baokim/verify", bk.VerifyResponseUrl)
 
 	r.Mux.NotFound = http.FileServer(http.Dir("public"))
 }
